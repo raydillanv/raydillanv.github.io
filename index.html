@@ -18,7 +18,7 @@
       // Set the expiration time for the cookie to 60 seconds
       date.setTime(date.getTime() + (60 * 1000));
       const expires = "expires=" + date.toUTCString();
-      document.cookie = "access=granted;" + expires + ";path=/test.html";
+      document.cookie = "access=granted;" + expires + ";path=/webpage.html";
       window.location.href = "webpage.html";
     } else {
       alert("Incorrect password. Please try again.");
