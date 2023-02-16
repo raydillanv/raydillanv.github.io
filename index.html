@@ -1,28 +1,29 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Password required</title>
-  </head>
-  <body>
-    <h1>Password required</h1>
-    <form onsubmit="return checkPassword()">
-      <label for="password">Password:</label>
-      <input type="password" id="password" name="password" required>
-      <button type="submit">Submit</button>
-    </form>
+<head>
+<title>Password required</title>
+</head>
+<body>
+<form onsubmit="setCookie()">
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password">
+  <input type="submit" value="Submit">
+</form>
 
-    <script>
-      function checkPassword() {
-        const password = document.getElementById('password').value;
-        if (password === '123') {
-          document.cookie = 'access=granted';
-          window.location.href = 'webpage.html';
-          return false;
-        } else {
-          alert('Incorrect password!');
-          return false;
-        }
-      }
-    </script>
-  </body>
+<script>
+  function setCookie() {
+    const password = document.getElementById('password').value;
+    if (password === '123') {
+      const date = new Date();
+      // Set the expiration time for the cookie to 60 seconds
+      date.setTime(date.getTime() + (60 * 1000));
+      const expires = "expires=" + date.toUTCString();
+      document.cookie = "access=granted;" + expires + ";path=/test.html";
+      window.location.href = "test.html";
+    } else {
+      alert("Incorrect password. Please try again.");
+    }
+  }
+</script>
+</body>
 </html>
