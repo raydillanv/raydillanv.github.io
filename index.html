@@ -15,7 +15,8 @@
       function checkPassword() {
         const password = document.getElementById('password').value;
         if (password === '123') {
-          window.location.href = 'indexOLD.html';
+          document.cookie = 'access=granted';
+          window.location.href = 'webpage.html';
           return false;
         } else {
           alert('Incorrect password!');

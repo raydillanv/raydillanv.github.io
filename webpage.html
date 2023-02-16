@@ -22,6 +22,15 @@ I plan to gradduate in 2026; I am writing this on 16/02/2023. <br> I will be goi
 	
 <br><a href= "indexOLD.html"> An HTML file. (A test of HTML usage). </a>
 
+<script>
+  const cookieValue = document.cookie
+    .split('; ')
+    .find(row => row.startsWith('access='))
+    ?.split('=')[1];
+  if (cookieValue !== 'granted') {
+    window.location.href = 'index.html';
+  }
+</script>
 	
 </body>
 </html>
