@@ -19,7 +19,7 @@
       date.setTime(date.getTime() + (60 * 1000));
       const expires = "expires=" + date.toUTCString();
       document.cookie = "access=granted;" + expires + ";path=/test.html";
-      window.location.href = "test.html";
+      window.location.href = "webpage.html";
     } else {
       alert("Incorrect password. Please try again.");
     }
