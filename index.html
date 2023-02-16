@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Page Title</title>
-</head>
-<body>
+  <head>
+    <title>Password required</title>
+  </head>
+  <body>
+    <h1>Password required</h1>
+    <form onsubmit="return checkPassword()">
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+      <button type="submit">Submit</button>
+    </form>
 
-<img src="imageToUse.jpg" alt="Japanese_Keyboard" width="888"	height ="295"><br>	
-	
-<h1>Victory Archival</h1>
-<h2> My Introduction: </h2>
-<p>My name is Dillan Victory. I am a <em>Computer Science major</em> with a <em> minor in Japanese</em>. I have taken Programming I and currently take
-	Programming II.<br> 
-I plan to gradduate in 2026; I am writing this on 16/02/2023. <br> I will be going abroad to Japan in Fall 2023 and Ireland in Spring 2024.</p>
-
-<p> Below are links to my CSC 1120 Projects: </p>
-<br><a href= "birthdayGame.zip"> Program I: Guessing Game </a>
-
-<br><a href= "Banking.zip"> Program II: Banking with Inheritance</a>
-
-<br><a href= "switchSyn.pdf"> A PDF of switch syntax (A test of PDF usage). </a>
-	
-<br><a href= "indexOLD.html"> An HTML file. (A test of HTML usage). </a>
-
-	
-</body>
+    <script>
+      function checkPassword() {
+        const password = document.getElementById('password').value;
+        if (password === '123') {
+          window.location.href = 'indexOLD.html';
+          return false;
+        } else {
+          alert('Incorrect password!');
+          return false;
+        }
+      }
+    </script>
+  </body>
 </html>
