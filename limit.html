@@ -15,11 +15,26 @@
     if (!accessCookie) {
       // If the access cookie is not present, send user back to index.html
       window.location.href = 'index.html';
-    }
+    } else {
+      // If the access cookie is present, extract the path from the cookie
+      const path = accessCookie.split('=')[1];
 
-    // Define the password as a JavaScript variable
-    const password = 'enter';
-    document.body.textContent = password; // This line is optional - just to show the password on the page
+      // Load the password list from the separate JSON file
+      fetch('passwords.json')
+        .then(response => response.json())
+        .then(passwordList => {
+          // Find the password object with the corresponding HTML file
+          const passwordObj = passwordList.passwords.find(p => p.htmlFile === path);
+
+          // If a matching password object is found, display the corresponding password
+          if (passwordObj) {
+            document.body.textContent = passwordObj.password;
+          } else {
+            // If no matching password object is found, send user back to index.html
+            window.location.href = 'index.html';
+          }
+        });
+    }
   </script>
 </body>
 </html>
