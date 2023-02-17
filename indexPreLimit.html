@@ -9,17 +9,16 @@
   <input type="password" id="password" name="password">
   <input type="submit" value="Submit">
 </form>
-		<p> <br> For questions email: raydillanv1@gmail.com </p>
-		<meta name= "color-scheme" content ="dark light">
-		<img src="lockScreen.jpg" alt="preview" width="200"	height ="295"><br>
+	<p> <br> For questions email: raydillanv1@gmail.com </p>
+	<meta name= "color-scheme" content ="dark light">
+	<img src="lockScreen.jpg" alt="preview" width="200"	height ="295"><br>
 <script>
   async function checkPassword(event) {
     event.preventDefault();
     const password = document.getElementById('password').value;
     const response = await fetch("limit.html");
     const content = await response.text();
-    const passwordInLimitFile = content.trim();
-    if (passwordInLimitFile === password) {
+    if (content.trim() === password) {
       document.cookie = "access=granted;path=/webpage.html";
       window.location.href = "webpage.html";
     } else {
