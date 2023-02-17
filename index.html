@@ -1,33 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Password required</title>
+  <title>Password required</title>
 </head>
 <body>
-<form onsubmit="checkPassword(event)">
-  <label for="password">Password:</label>
-  <input type="password" id="password" name="password">
-  <input type="submit" value="Submit">
-</form>
-<p> <br> For questions email: raydillanv1@gmail.com </p>
-<meta name= "color-scheme" content ="dark light">
-<img src="lockScreen.jpg" alt="preview" width="200"	height ="295"><br>
-
-<script>
-async function checkPassword(event) {
-  event.preventDefault();
-  const password = document.getElementById('password').value;
-  const response = await fetch("limit.html");
-  const content = await response.text();
-  const passwordList = JSON.parse(content);
-  const matchedPassword = passwordList.find(p => p.password === password);
-  if (matchedPassword) {
-    document.cookie = `access=granted;path=/${matchedPassword.htmlFile}`;
-    window.location.href = matchedPassword.htmlFile;
-  } else {
-    alert("Incorrect password. Please try again.");
-  }
-}
-</script>
+  <form onsubmit="checkPassword(event)">
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password">
+    <input type="submit" value="Submit">
+  </form>
+  <p> <br> For questions email: raydillanv1@gmail.com </p>
+  <meta name= "color-scheme" content ="dark light">
+  <img src="lockScreen.jpg" alt="preview" width="200" height ="295"><br>
+  <script>
+    async function checkPassword(event) {
+      event.preventDefault();
+      const password = document.getElementById('password').value;
+      const response = await fetch("limit.html");
+      const content = await response.text();
+      const passwordFile = JSON.parse(content);
+      const location = passwordFile[password];
+      if (location) {
+        document.cookie = "access=granted;path=/" + location;
+        window.location.href = location;
+      } else {
+        alert("Incorrect password. Please try again.");
+      }
+    }
+  </script>
 </body>
 </html>
