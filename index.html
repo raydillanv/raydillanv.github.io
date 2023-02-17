@@ -18,10 +18,13 @@
       const password = document.getElementById('password').value;
       const response = await fetch("limit.html");
       const content = await response.text();
-      const passwordFile = JSON.parse(content);
-      const location = passwordFile[password];
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(content, "text/html");
+      const script = doc.querySelector('script#passwords');
+      const passwords = JSON.parse(script.innerHTML);
+      const location = passwords[password];
       if (location) {
-        document.cookie = "access=granted;path=/" + location;
+        document.cookie = `access=granted;path=/${location}`;
         window.location.href = location;
       } else {
         alert("Incorrect password. Please try again.");
