@@ -7,13 +7,6 @@
   <h1>Limit Page</h1>
   <p>This page requires a valid cookie to be accessed.</p>
 
-  <script id="passwords">
-    const passwords = {
-      'enter': 'webpage.html',
-      // add more passwords and corresponding files here as needed
-    };
-  </script>
-
   <script>
     const accessCookie = document.cookie
       .split('; ')
@@ -24,20 +17,9 @@
       window.location.href = 'index.html';
     }
 
-    // Find the password in the array that matches the value entered in the form
-    const form = document.querySelector('form');
-    const passwordInput = document.querySelector('input[name="password"]');
-    form.addEventListener('submit', (event) => {
-      event.preventDefault();
-      const password = passwordInput.value;
-      const matchedFile = passwords[password];
-      if (matchedFile) {
-        document.cookie = `access=granted;path=/${matchedFile}`;
-        window.location.href = matchedFile;
-      } else {
-        alert("Incorrect password. Please try again.");
-      }
-    });
+    // Define the password as a JavaScript variable
+    const password = 'enter';
+    document.body.textContent = password; // This line is optional - just to show the password on the page
   </script>
 </body>
 </html>
