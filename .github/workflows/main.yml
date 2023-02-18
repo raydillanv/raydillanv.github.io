@@ -20,7 +20,7 @@ jobs:
 
       - name: Generate files.json
         run: |
-          cd files.json
+          cd $GITHUB_WORKSPACE
           ls -1 | grep -v 'files.json' | xargs -I{} sh -c "echo '{\"name\":\"{}\",\"url\":\"{}\"},' >> files.json"
           sed -i '$ s/.$//' files.json # remove the trailing comma
           echo ']' >> files.json # add the closing bracket
@@ -29,6 +29,6 @@ jobs:
         run: |
           git config --global user.email "raydillanv1@gmail.com"
           git config --global user.name "Dillan V"
-          git add files.json
+          git add $GITHUB_WORKSPACE/files.json
           git commit -m "Update files.json"
           git push
