@@ -1,1 +1,13 @@
-[  {    "name": "example.pdf",    "url": "example.pdf"  },  {    "name": "secondExample.jpg",    "url": "secondExample.jpg"  },  {    "name": "Example.zip",    "url": "Example.zip"  }]
+[
+{"name":"Banking.zip","url":"Banking.zip"},
+{"name":"birthdayGame.zip","url":"birthdayGame.zip"},
+{"name":"imageToUse.jpg","url":"imageToUse.jpg"},
+{"name":"index.html","url":"index.html"},
+{"name":"limit.html","url":"limit.html"},
+{"name":"listFolder.html","url":"listFolder.html"},
+{"name":"lockScreen.jpg","url":"lockScreen.jpg"},
+{"name":"password123.html","url":"password123.html"},
+{"name":"script.js","url":"script.js"},
+{"name":"switchSyn.pdf","url":"switchSyn.pdf"},
+{"name":"webpage.html","url":"webpage.html"}
+]
