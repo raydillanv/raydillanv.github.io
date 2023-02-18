@@ -21,9 +21,10 @@ jobs:
       - name: Generate files.json
         run: |
           cd $GITHUB_WORKSPACE
+          echo "[" > files.json
           ls -1 | grep -v 'files.json' | xargs -I{} sh -c "echo '{\"name\":\"{}\",\"url\":\"{}\"},' >> files.json"
           sed -i '$ s/.$//' files.json # remove the trailing comma
-          echo ']' >> files.json # add the closing bracket
+          echo "]" >> files.json # add the closing bracket
 
       - name: Commit changes
         run: |
