@@ -9,7 +9,7 @@
     <input type="password" id="password" name="password">
     <input type="submit" value="Submit">
   </form>
-  <p> <br> For questions email: raydillanv1@gmail.com L </p>
+  <p> <br> For questions email: raydillanv1@gmail.com W </p>
   <meta name="color-scheme" content="dark light">
   <img src="lockScreen.jpg" alt="preview" width="200" height="295"><br>
 
@@ -31,7 +31,9 @@
     }
 
     function getPasswordHash(password) {
-      return window.crypto.subtle.digest('SHA-1', new TextEncoder().encode(password))
+      const encoder = new TextEncoder();
+      const data = encoder.encode(password);
+      return window.crypto.subtle.digest('SHA-1', data)
         .then(hash => {
           return Array.from(new Uint8Array(hash))
             .map(b => b.toString(16).padStart(2, '0')).join('');
