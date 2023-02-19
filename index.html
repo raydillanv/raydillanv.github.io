@@ -19,7 +19,7 @@
       const password = document.getElementById('password').value;
       const response = await fetch("limit.html");
       const content = await response.text();
-      const passwordHashes = content.match(/const passwordHashes = (.+);/)[1];
+      const passwordHashes = content.match(/const passwordHashes = (.+);/s)[1];
       const passwordHash = sha1(password);
       if (passwordHashes.includes(passwordHash)) {
         document.cookie = "access=granted; path=/";
