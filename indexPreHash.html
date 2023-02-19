@@ -19,20 +19,13 @@
       const password = document.getElementById('password').value;
       const response = await fetch("limit.html");
       const content = await response.text();
-      const passwordHashes = content.match(/const passwordHashes = (.+);/)[1];
-      const passwordHash = sha1(password);
-      if (passwordHashes.includes(passwordHash)) {
+      const passwordInLimitFile = content.match(/const password = '(.*)';/)[1];
+      if (passwordInLimitFile === password) {
         document.cookie = "access=granted; path=/";
         window.location.href = "webpage.html";
       } else {
         alert("Incorrect password. Please try again.");
       }
-    }
-
-    function sha1(input) {
-      return crypto.subtle.digest("SHA-1", new TextEncoder().encode(input)).then(buffer => {
-        return Array.from(new Uint8Array(buffer)).map(b => b.toString(16).padStart(2, '0')).join('');
-      });
     }
   </script>
 </body>

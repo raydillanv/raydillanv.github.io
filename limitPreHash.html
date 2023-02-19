@@ -8,8 +8,7 @@
   <p>This page requires a valid cookie to be accessed.</p>
 
   <script>
-    const accessCookie = document.cookie
-      .split('; ')
+    const accessCookie = document.cookie.split('; ')
       .find(row => row.startsWith('access='));
 
     if (!accessCookie) {
@@ -19,7 +18,6 @@
 
     // Define the password as a JavaScript variable
     const password = 'entryWon';
-    document.body.textContent = password; // This line is optional - just to show the password on the page
   </script>
 </body>
 </html>
