@@ -4,16 +4,18 @@
   <title>Password Required</title>
 </head>
 <body>
-  <h1>Please enter a password. W</h1>
-	
+  <h1>Please enter a password.</h1>
+  
   <form>
     <label for="password">Password:</label>
     <input type="password" id="password" name="password">
     <button type="submit" id="submit">Submit</button>
   </form>
- <p> <br> For questions email: raydillanv1@gmail.com </p>
+
+  <p> <br> For questions email: raydillanv1@gmail.com </p>
   <meta name="color-scheme" content="dark light">
   <img src="lockScreen.jpg" alt="preview" width="200" height="295"><br>
+
   <script>
     const passwordForm = document.querySelector('form');
     const submitButton = document.querySelector('#submit');
@@ -40,10 +42,12 @@
               const htmlDoc = parser.parseFromString(text, 'text/html');
               const expectedHash = htmlDoc.querySelector('#passwordHash')?.textContent;
               if (passwordHash === expectedHash) {
+                // Set a cookie to allow access to webpage.html
+                document.cookie = "access=true; max-age=60";
                 window.location.href = 'webpage.html';
               } else {
                 const errorElement = document.createElement('p');
-                errorElement.textContent = `The password is incorrect. ${expectedHash ? '' : 'Hash: '}${passwordHash}`;
+                errorElement.textContent = `The password is incorrect. Hash: ${passwordHash}`;
                 const existingError = document.querySelector('#error');
                 if (existingError) {
                   existingError.replaceWith(errorElement);
