@@ -1,25 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Password Required</title>
+  <title>Password required</title>
 </head>
 <body>
-  <h1>Please enter a password.</h1>
-  
-  <form>
+  <form onsubmit="checkPassword(event)">
     <label for="password">Password:</label>
     <input type="password" id="password" name="password">
-    <button type="submit" id="submit">Submit</button>
+    <input type="submit" value="Submit">
   </form>
-
-  <p> <br> For questions email: raydillanv1@gmail.com </p>
+  <p> <br> For questions email: raydillanv1@gmail.com L </p>
   <meta name="color-scheme" content="dark light">
   <img src="lockScreen.jpg" alt="preview" width="200" height="295"><br>
 
   <script>
-    const passwordForm = document.querySelector('form');
-    const submitButton = document.querySelector('#submit');
-    
+    async function checkPassword(event) {
+      event.preventDefault();
+      const password = document.getElementById('password').value;
+      const passwordHash = await getPasswordHash(password);
+      const response = await fetch("limit.html");
+      const content = await response.text();
+      const passwordInLimitFile = content.match(/const password = '(.*)';/)[1];
+      const passwordInLimitFileHash = await getPasswordHash(passwordInLimitFile);
+      if (passwordHash === passwordInLimitFileHash) {
+        document.cookie = "access=granted; path=/";
+        window.location.href = "webpage.html";
+      } else {
+        alert("Incorrect password. Please try again.");
+      }
+    }
+
     function getPasswordHash(password) {
       return window.crypto.subtle.digest('SHA-1', new TextEncoder().encode(password))
         .then(hash => {
@@ -27,50 +37,6 @@
             .map(b => b.toString(16).padStart(2, '0')).join('');
         });
     }
-
-    function checkPassword(event) {
-      event.preventDefault();
-      
-      const passwordInput = document.querySelector('#password');
-      const password = passwordInput.value;
-      getPasswordHash(password)
-        .then(passwordHash => {
-          return fetch('limit.html')
-            .then(response => response.text())
-            .then(text => {
-              const parser = new DOMParser();
-              const htmlDoc = parser.parseFromString(text, 'text/html');
-              const expectedHash = htmlDoc.querySelector('#passwordHash')?.textContent;
-              if (passwordHash === expectedHash) {
-                // Set a cookie to allow access to webpage.html
-                document.cookie = "access=true; max-age=60";
-                window.location.href = 'webpage.html';
-              } else {
-                const errorElement = document.createElement('p');
-                errorElement.textContent = `The password is incorrect. Hash: ${passwordHash}`;
-                const existingError = document.querySelector('#error');
-                if (existingError) {
-                  existingError.replaceWith(errorElement);
-                } else {
-                  passwordForm.appendChild(errorElement);
-                }
-              }
-            });
-        })
-        .catch(error => {
-          console.error(error);
-          const errorElement = document.createElement('p');
-          errorElement.textContent = `An error occurred. ${error.message}`;
-          const existingError = document.querySelector('#error');
-          if (existingError) {
-            existingError.replaceWith(errorElement);
-          } else {
-            passwordForm.appendChild(errorElement);
-          }
-        });
-    }
-
-    submitButton.addEventListener('click', checkPassword);
   </script>
 </body>
 </html>
