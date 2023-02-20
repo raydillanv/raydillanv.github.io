@@ -17,22 +17,15 @@
     async function checkPassword(event) {
       event.preventDefault();
       const password = document.getElementById('password').value;
-      const hash = await getPasswordHash(password);
       const response = await fetch("limit.html");
       const content = await response.text();
       const passwordInLimitFile = content.match(/const password = '(.*)';/)[1];
-      if (passwordInLimitFile === hash) {
+      if (passwordInLimitFile === password) {
         document.cookie = "access=granted; path=/";
         window.location.href = "webpage.html";
       } else {
         alert("Incorrect password. Please try again.");
       }
-    }
-
-    async function getPasswordHash(password) {
-      const hash = await window.crypto.subtle.digest('SHA-1', new TextEncoder().encode(password));
-      return Array.from(new Uint8Array(hash))
-        .map(b => b.toString(16).padStart(2, '0')).join('');
     }
   </script>
 </body>
