@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hash Text</title>
+  </head>
+  <body>
+    <h1>Enter text to hash:</h1>
+    <form>
+      <label for="text-input">Text:</label>
+      <input type="text" id="text-input" name="text-input"><br><br>
+      <input type="button" value="Hash Text" onclick="hashText()">
+    </form>
+    <h2>SHA-1 hash:</h2>
+    <p id="hash-output"></p>
+    <script>
+      function getPasswordHash(password) {
+        return window.crypto.subtle.digest('SHA-1', new TextEncoder().encode(password))
+          .then(hash => {
+            return Array.from(new Uint8Array(hash))
+              .map(b => b.toString(16).padStart(2, '0')).join('');
+          });
+      }
+      
+      function hashText() {
+        const textInput = document.getElementById('text-input');
+        const hashOutput = document.getElementById('hash-output');
+        const password = textInput.value;
+        
+        getPasswordHash(password)
+          .then(hash => {
+            hashOutput.innerText = hash;
+          });
+      }
+    </script>
+  </body>
+</html>
