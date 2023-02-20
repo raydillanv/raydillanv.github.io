@@ -9,7 +9,7 @@
     <input type="password" id="password" name="password">
     <input type="submit" value="Submit">
   </form>
-  <p> <br> For questions email: raydillanv1@gmail.com L </p>
+  <p> <br> For questions email: raydillanv1@gmail.com </p>
   <meta name="color-scheme" content="dark light">
   <img src="lockScreen.jpg" alt="preview" width="200" height="295"><br>
 
@@ -17,27 +17,15 @@
     async function checkPassword(event) {
       event.preventDefault();
       const password = document.getElementById('password').value;
-      const passwordHash = await getPasswordHash(password);
       const response = await fetch("limit.html");
       const content = await response.text();
       const passwordInLimitFile = content.match(/const password = '(.*)';/)[1];
-      const passwordInLimitFileHash = await getPasswordHash(passwordInLimitFile);
-      if (passwordHash === passwordInLimitFileHash) {
+      if (passwordInLimitFile === password) {
         document.cookie = "access=granted; path=/";
         window.location.href = "webpage.html";
       } else {
         alert("Incorrect password. Please try again.");
       }
-    }
-
-    function getPasswordHash(password) {
-      const encoder = new TextEncoder();
-      const data = encoder.encode(password);
-      return window.crypto.subtle.digest('SHA-1', data)
-        .then(hash => {
-          return Array.from(new Uint8Array(hash))
-            .map(b => b.toString(16).padStart(2, '0')).join('');
-        });
     }
   </script>
 </body>
