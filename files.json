@@ -1,15 +1,11 @@
 [
+{"name":"Information.html","url":"Information.html"},
 {"name":"Old","url":"Old"},
 {"name":"OtherTest","url":"OtherTest"},
-<<<<<<< HEAD
-{"name":"websiteCode","url":"websiteCode"},
-  {"name":"Old","url":"Old"},
-  {"name":"css","url":"css"},
-  {"name":"images","url":"images"},
-  {"name":"index.html","url":"index.html"},
-  {"name":"js","url":"js"}
-=======
+{"name":"css","url":"css"},
+{"name":"images","url":"images"},
 {"name":"index.html","url":"index.html"},
+{"name":"js","url":"js"},
+{"name":"raydillanv.github.io.iml","url":"raydillanv.github.io.iml"},
 {"name":"websiteCode","url":"websiteCode"}
->>>>>>> 01245ddf845129c9aeab754b22732dbb8df01324
 ]
