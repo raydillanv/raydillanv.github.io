@@ -13,173 +13,327 @@
   </head>
   <body style="padding-top: 70px">
     <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-    }
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
 
-    .navbar {
-      display: flex;
+      .navbar {
+        display: flex;
 
-      background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.5));
-      backdrop-filter: blur(10px);
-      color: white;
-      padding: 5px 0;
-      font-size: 0.9rem;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
+        background: linear-gradient(
+          rgba(255, 255, 255, 0.7),
+          rgba(255, 255, 255, 0.5)
+        );
+        backdrop-filter: blur(10px);
+        color: white;
+        padding: 5px 0;
+        font-size: 0.9rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
 
-    .navbar-nav .nav-link {
-      color: #303030;
-      padding: 5px 15px;
-    }
+      .navbar-nav .nav-link {
+        color: #303030;
+        padding: 5px 15px;
+      }
 
-    .navbar-nav .nav-link:hover {
-      background-color: rgba(0, 123, 255, 0.1); /* Light blue background on hover */
-      color: #007bff; /* Darker text color for contrast */
-      border-radius: 5px; /* Optional: Adds rounded corners to the background */
-      transform: scale(1.05); /* Slight increase in size */
-      transition: all 0.3s ease-in-out; /* Smooth transition for the hover effect */
-    }
+      .navbar-nav .nav-link:hover {
+        background-color: rgba(
+          0,
+          123,
+          255,
+          0.1
+        ); /* Light blue background on hover */
+        color: #007bff; /* Darker text color for contrast */
+        border-radius: 5px; /* Optional: Adds rounded corners to the background */
+        transform: scale(1.05); /* Slight increase in size */
+        transition: all 0.3s ease-in-out; /* Smooth transition for the hover effect */
+      }
 
-    .dropdown-item:hover {
-      background-color: rgba(0, 123, 255, 0.1); /* Light blue background on hover */
-      color: #007bff; /* Darker blue for text for better visibility */
-      border-radius: 5px; /* Optional: Adds rounded corners */
-      transition: background-color 0.3s ease; /* Smooth transition for the background color */
-    }
+      .dropdown-item:hover {
+        background-color: rgba(
+          0,
+          123,
+          255,
+          0.1
+        ); /* Light blue background on hover */
+        color: #007bff; /* Darker blue for text for better visibility */
+        border-radius: 5px; /* Optional: Adds rounded corners */
+        transition: background-color 0.3s ease; /* Smooth transition for the background color */
+      }
 
-    .social-media-links a:hover {
-      background-color: rgba(0, 123, 255, 0.2); /* Slightly different to give a subtle effect */
-      transform: scale(1.1); /* Slightly larger scale for emphasis */
-      transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition for both properties */
-      border-radius: 50%; /* Assuming icons are circular, this enhances that appearance */
-    }
+      .dropdown-menu {
+        background: linear-gradient(
+          rgba(255, 255, 255, 0.7),
+          rgba(255, 255, 255, 0.5)
+        );
+        backdrop-filter: blur(10px);
+      }
 
-    .main-title {
-      font-size: 76px; /* Adjust the font size as needed */
-    }
+      .social-media-links a:hover {
+        background-color: rgba(
+          0,
+          123,
+          255,
+          0.2
+        ); /* Slightly different to give a subtle effect */
+        transform: scale(1.1); /* Slightly larger scale for emphasis */
+        transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition for both properties */
+        border-radius: 50%; /* Assuming icons are circular, this enhances that appearance */
+      }
 
-    /*Button CSS */
-    .mainButton {
-      background-image: linear-gradient(92.88deg, #455EB5 9.16%, #5643CC 43.89%, #673FD7 64.72%);
-      border-radius: 8px;
-      border-style: none;
-      box-sizing: border-box;
-      color: #FFFFFF;
-      cursor: pointer;
-      flex-shrink: 0;
-      font-family: "Inter UI","SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
-      font-size: 28px;
-      font-weight: 500;
-      height: 4rem;
-      padding: 0 3.5rem;
-      text-align: center;
-      text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
-      transition: all .5s;
-      user-select: none;
-      -webkit-user-select: none;
-      touch-action: manipulation;
-    }
+      .main-title {
+        font-size: 76px; /* Adjust the font size as needed */
+      }
 
-    .mainButton:hover {
-      box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
-      transition-duration: .1s;
-    }
+      /*Button CSS */
+      .mainButton {
+        background-image: linear-gradient(
+          92.88deg,
+          #455eb5 9.16%,
+          #5643cc 43.89%,
+          #673fd7 64.72%
+        );
+        border-radius: 8px;
+        border-style: none;
+        box-sizing: border-box;
+        color: #ffffff;
+        cursor: pointer;
+        flex-shrink: 0;
+        font-family: "Inter UI", "SF Pro Display", -apple-system,
+          BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+          "Open Sans", "Helvetica Neue", sans-serif;
+        font-size: 28px;
+        font-weight: 500;
+        height: 4rem;
+        padding: 0 3.5rem;
+        text-align: center;
+        text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+        transition: all 0.5s;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+      }
 
-    @media (min-width: 768px) {
-    .mainButton {
-        padding: 0 2.6rem;
-    }
-}
+      .mainButton:hover {
+        box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
+        transition-duration: 0.1s;
+      }
 
+      @media (min-width: 768px) {
+        .mainButton {
+          padding: 0 2.6rem;
+        }
+      }
 
-    .section {
-      padding: 20px;
-      min-height: 400px;
-      background-size: cover;
-      color: white;
-    }
+      .text-container {
+        background-color: rgba(
+          255,
+          255,
+          255,
+          0.773
+        ); /* Grey with 50% opacity */
+        color: rgb(0, 0, 0);
+        padding: 20px;
+        border-radius: 20px; /* Adds rounded corners to the element */
+        overflow: hidden;
+      }
 
-        #about {
-          background-image: url('images/clingmans-dome-at-sunset-great-smoky-mountains-wallpaper-eb266c0db3412f9935e4eb09dd8c7ca0.jpg');
+      .copyright-footer {
+        border-top: 1px solid #cccccc; /* Thin light grey line */
+        padding-top: 10px; /* Space above the text */
+        margin-top: 10px; /* Space between the line and social media links */
+        margin: 0;
+        font-size: 0.9vw;
+      }
+
+      .section {
+        padding: 20px;
+        min-height: 400px;
+        background-size: cover;
+        color: white;
+      }
+
+      /* Light mode styles are your default styles, so no changes are needed for them here. */
+
+      /* Dark mode styles */
+      @media (prefers-color-scheme: dark) {
+        body,
+        html {
+          background-color: #121212; /* Dark background */
+          color: #e0e0e0; /* Lighter text */
         }
 
-        #education {
-          background-image: url('images/header-faculty-staff.jpg');
+        .navbar {
+          background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+          color: #e0e0e0;
         }
 
-        #work {
-          background-image: url('images/win.PNG');
+        .navbar-nav .nav-link,
+        .dropdown-item,
+        .nav-link.text-dark {
+          color: #e0e0e0; /* Lighter text color */
         }
 
-        #projects {
-          background-image: url('images/fukuoka-fukuoka-tower-sunset-tower-antenna-japan-463815eefbe3045ea27586028f0e085a.jpg');
+        .text-container {
+          background-color: rgba(0, 0, 0, 0.773); /* Darker background */
+          color: #e0e0e0; /* Lighter text color */
         }
 
-        #language {
-          background-image: url('https://www.esl-languages.com/sites/default/files/city/gallery/esl-fukuoka-language-stay-hero.jpg');
+        .section,
+        .navbar-light .navbar-nav .nav-link {
+          color: #e0e0e0; /* Lighter text color for readability */
         }
 
-        #other {
-          background-image: url('https://www.visittheusa.com/sites/default/files/styles/hero_l/public/images/hero_media_image/2023-07/2e82bbc2-3c5f-4e51-9e64-a3ebedbd559d.jpeg?h=de10ecfe&itok=s18DYClQ');
-          border-radius: 20px; /* Adds rounded corners to the element */
-          overflow: hidden; /* Ensures that the content does not overflow the rounded corners */
+        .mainButton {
+          background-image: linear-gradient(
+            92.88deg,
+            #233b55 9.16%,
+            #343d5c 43.89%,
+            #454e67 64.72%
+          );
+          color: #ffffff; /* Keeping the button text white for contrast */
         }
-  </style>
 
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light">
-  <button class="navbar-toggler" type="button" data-toggle="collapse"
+        .navbar .navbar-nav .nav-link {
+          color: #ffffff !important; /* Force white text color */
+        }
+
+        .dropdown-menu {
+          background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+          backdrop-filter: blur(10px);
+          color: #e0e0e0; /* Adjusting the text color for visibility */
+        }
+
+        .dropdown-item {
+          color: #e0e0e0; /* Ensuring dropdown items are also light colored for dark mode */
+        }
+
+        .dropdown-item:hover {
+          background-color: rgba(
+            255,
+            255,
+            255,
+            0.1
+          ); /* Lighter background on hover for contrast */
+          color: #ffffff; /* Adjust hover color for visibility */
+        }
+
+        /* Adjust further elements as needed */
+      }
+
+      #about {
+        background-image: url("images/clingmans-dome-at-sunset-great-smoky-mountains-wallpaper-eb266c0db3412f9935e4eb09dd8c7ca0.jpg");
+        border-radius: 20px; /* Adds rounded corners to the element */
+        overflow: hidden; /* Ensures that the content does not overflow the rounded corners */
+      }
+
+      #education {
+        background-image: url("images/header-faculty-staff.jpg");
+      }
+
+      #work {
+        background-image: url("images/pexels-codioful-(formerly-gradienta)-7130469.jpg");
+      }
+
+      #projects {
+        background-image: url("images/fukuoka-fukuoka-tower-sunset-tower-antenna-japan-463815eefbe3045ea27586028f0e085a.jpg");
+      }
+
+      #language {
+        background-image: url("https://www.esl-languages.com/sites/default/files/city/gallery/esl-fukuoka-language-stay-hero.jpg");
+      }
+
+      #other {
+        background-image: url("https://www.visittheusa.com/sites/default/files/styles/hero_l/public/images/hero_media_image/2023-07/2e82bbc2-3c5f-4e51-9e64-a3ebedbd559d.jpeg?h=de10ecfe&itok=s18DYClQ");
+      }
+    </style>
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-light">
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
     data-target="#navbarSupportedContent1"
-    aria-controls="navbarSupportedContent1" aria-expanded="false"
-    aria-label="Toggle navigation">
+    aria-controls="navbarSupportedContent1"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
     <span class="navbar-toggler-icon"></span>
   </button>
   <div
     class="collapse navbar-collapse text-dark bg-transparent justify-content-center"
-    id="navbarSupportedContent1">
-    <ul class="navbar-nav mx-auto ">
+    id="navbarSupportedContent1"
+  >
+    <ul class="navbar-nav mx-auto">
+      <li class="nav-item active">
+        <a class="nav-link text-dark" href="index.html">
+          <img
+            src="apple-icon.png"
+            alt="Home"
+            style="height: 20px; width: auto; margin-right: 5px"
+          />
+          Home
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
 
-              <li class="nav-item active">
-          <a class="nav-link text-dark" href="index.html">
-              <img src="apple-icon.png" alt="Home" style="height: 20px; width: auto; margin-right: 5px;"> Home <span class="sr-only">(current)</span>
-          </a>
-        </li>
+      <li class="nav-item">
+        <a class="nav-link text-dark" href="education.html">Education</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-dark" href="work.html">Work History</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-dark" href="projects.html">Projects</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-dark" href="language.html"
+          >Language Study</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-dark" href="other.html">Other</a>
+      </li>
 
-      <li class="nav-item"> <a class="nav-link text-dark"
-          href="education.html">Education</a> </li>
-      <li class="nav-item"> <a class="nav-link text-dark"
-          href="work.html">Work History</a> </li>
-      <li class="nav-item"> <a class="nav-link text-dark"
-          href="projects.html">Projects</a> </li>
-      <li class="nav-item"> <a class="nav-link text-dark"
-          href="language.html">Language Study</a> </li>
-      <li class="nav-item"> <a class="nav-link text-dark"
-          href="other.html">Other</a> </li>
-
-      <li class="nav-item"> <a class="nav-link text-dark"
-          href="Japanese/other.html">日本語</a> </li>
+      <li class="nav-item">
+        <a class="nav-link text-dark" href="Japanese/index.html">日本語</a>
+      </li>
 
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle text-dark" href="#"
-          id="navbarDropdown1" role="button" data-toggle="dropdown"
-          aria-haspopup="true" aria-expanded="false"> Dropdown </a>
+        <a
+          class="nav-link dropdown-toggle text-dark"
+          href="#"
+          id="navbarDropdown1"
+          role="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          Dropdown
+        </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
-          <a class="dropdown-item"
-            href="https://www.paypal.com/donate/?business=B6GXXULAEPFF2&no_recurring=0&currency_code=USD">Donate
-            to Dillan</a>
-          <a class="dropdown-item"
-            href="https://tools.tastethecode.com/youtube-latest/r/raydillanv">My
-            Latest Video</a>
+          <a
+            class="dropdown-item"
+            href="https://www.paypal.com/donate/?business=B6GXXULAEPFF2&no_recurring=0&currency_code=USD"
+            >Donate to Dillan</a
+          >
+          <a
+            class="dropdown-item"
+            href="https://tools.tastethecode.com/youtube-latest/r/raydillanv"
+            >My Latest Video</a
+          >
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item"
-            href="https://github.com/raydillanv">Dillan's GitHub</a>
+          <a class="dropdown-item" href="https://github.com/raydillanv"
+            >Dillan's GitHub</a
+          >
         </div>
       </li>
     </ul>
   </div>
-    </nav>
+</nav>
 
 
 
@@ -219,53 +373,130 @@
       </body>
     </div>
 
-    <footer style="text-align: center; padding: 10px;">
-      <div class="social-media-links" style="margin-bottom: 10px;">
-        <a href="https://www.instagram.com/raydillanv/" target="_blank"
-          style="margin-right: 2px; display: inline-block; width: 5%;">
-          <img src="images/tBxa1IFcTQH.png" alt="Instagram"
-            style="width: 100%; height: auto; max-width: 40px;" />
-        </a>
-        <a href="https://discord.gg/dDMxsRqN7Z" target="_blank"
-          style="margin-right: 2px; display: inline-block; width: 5%;">
-          <img src="images/icon_clyde_blurple_RGB.png" alt="Instagram"
-            style="width: 100%; height: auto; max-width: 40px;" />
-        </a>
-        <a href="https://twitter.com/DillanVictory" target="_blank"
-          style="margin-right: 2px; display: inline-block; width: 5%;">
-          <img src="images/X-logo-transparent-black-twitter.png" alt="Instagram"
-            style="width: 100%; height: auto; max-width: 40px;" />
-        </a>
-        <a href="https://www.linkedin.com/in/dillanvictory/" target="_blank"
-          style="margin-right: 2px; display: inline-block; width: 5%;">
-          <img src="images/LinkedIn_icon_circle.svg.png" alt="LinkedIn"
-            style="width: 100%; height: auto; max-width: 40px;" />
-        </a>
-        <a href="https://www.youtube.com/channel/UCZcnbssSYX67ztziXTp-oqQ"
+    <footer style="text-align: center; padding: 10px">
+      <div class="social-media-links" style="margin-bottom: 10px">
+        <a
+          href="https://www.instagram.com/raydillanv/"
           target="_blank"
-          style="margin-right: 2px; display: inline-block; width: 5%;">
-          <img src="images/free-youtube-logo-icon-2431-thumb.png" alt="YouTube"
-            style="width: 100%; height: auto; max-width: 40px;" />
+          style="margin-right: 2px; display: inline-block; width: 5%"
+        >
+          <img
+            src="images/tBxa1IFcTQH.png"
+            alt="Instagram"
+            style="width: 100%; height: auto; max-width: 40px"
+          />
         </a>
-        <a href="https://github.com/raydillanv" target="_blank"
-          style="margin-right: 2px; display: inline-block; width: 5%;">
-          <img src="images/25231.png" alt="GitHub"
-            style="width: 100%; height: auto; max-width: 40px;" />
+        <a
+          href="https://discord.gg/dDMxsRqN7Z"
+          target="_blank"
+          style="margin-right: 2px; display: inline-block; width: 5%"
+        >
+          <img
+            src="images/icon_clyde_blurple_RGB.png"
+            alt="Instagram"
+            style="width: 100%; height: auto; max-width: 40px"
+          />
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/dillanvictory/"
+          target="_blank"
+          style="margin-right: 2px; display: inline-block; width: 5%"
+        >
+          <img
+            src="images/LinkedIn_icon_circle.svg.png"
+            alt="LinkedIn"
+            style="width: 100%; height: auto; max-width: 40px"
+          />
+        </a>
+        <a
+          href="https://www.youtube.com/channel/UCZcnbssSYX67ztziXTp-oqQ"
+          target="_blank"
+          style="margin-right: 2px; display: inline-block; width: 5%"
+        >
+          <img
+            src="images/free-youtube-logo-icon-2431-thumb.png"
+            alt="YouTube"
+            style="width: 100%; height: auto; max-width: 40px"
+          />
+        </a>
+        <a
+          href="https://github.com/raydillanv"
+          target="_blank"
+          style="margin-right: 2px; display: inline-block; width: 5%"
+        >
+          <img
+            src="images/25231.png"
+            alt="GitHub"
+            style="width: 100%; height: auto; max-width: 40px"
+          />
+        </a>
+        <a
+          href="https://twitter.com/DillanVictory"
+          target="_blank"
+          style="margin-right: 2px; display: inline-block; width: 5%"
+        >
+          <img
+            src="images/X-logo-transparent-black-twitter.png"
+            alt="Instagram"
+            style="width: 100%; height: auto; max-width: 40px"
+          />
         </a>
         <a
           href="https://www.paypal.com/donate/?business=B6GXXULAEPFF2&no_recurring=0&currency_code=USD"
           target="_blank"
-          style="margin-right: 2px; display: inline-block; width: 5%;">
-          <img src="images/paypal.png" alt="GitHub"
-            style="width: 100%; height: auto; max-width: 40px;" />
+          style="margin-right: 2px; display: inline-block; width: 5%"
+        >
+          <img
+            src="images/paypal.png"
+            alt="GitHub"
+            style="width: 100%; height: auto; max-width: 40px"
+          />
         </a>
       </div>
-      <p style="margin: 0; font-size: 1.5vw;">Dillan R. Victory &copy; 2024</p>
+      <p class="copyright-footer">
+        Copyright &copy; 2024
+        <a href="mailto:dillanrvictory@gmail.com">Dillan Victory</a>. All rights
+        reserved.
+      </p>
     </footer>
 
     <!-- jQuery and Bootstrap JS -->
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap-4.4.1.js"></script>
+    <script>
+      // Function to change the icon images in dark mode
+      function updateIconsForDarkMode() {
+        if (
+          window.matchMedia &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches
+        ) {
+          // If user prefers dark mode, change the icons
+          document.querySelector(
+            'a[href="https://twitter.com/DillanVictory"] img'
+          ).src = "images/x-twitter-logo-white.png"; // Update the source for the Twitter icon
+          document.querySelector(
+            'a[href="https://github.com/raydillanv"] img'
+          ).src = "images/github-white-icon.png"; // Update the source for the GitHub icon
+        } else {
+          // If user prefers light mode, keep or set the icons to their light mode versions
+          document.querySelector(
+            'a[href="https://twitter.com/DillanVictory"] img'
+          ).src = "images/X-logo-transparent-black-twitter.png"; // Path to your light mode Twitter icon
+          document.querySelector(
+            'a[href="https://github.com/raydillanv"] img'
+          ).src = "images/25231.png"; // Path to your light mode GitHub icon
+        }
+      }
+
+      // Call the function to ensure icons are set correctly on initial load
+      updateIconsForDarkMode();
+
+      // Add a listener to change icons when the system theme changes
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .addListener(updateIconsForDarkMode);
+    </script>
   </body>
 </html>
