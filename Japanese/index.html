@@ -1,195 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1" name="viewport">
-    <title>Japanese page for Dillan Victory</title>
-    <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>About Dillan Victory</title>
+    <link href="css/bootstrap-4.4.1.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/universalStyles.css">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <!-- Additional icons and manifest for a coherent look across devices -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#ffffff">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/apple-icon-180x180.png"
+    />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#ffffff" />
   </head>
   <body style="padding-top: 70px">
     <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-    }
 
-    .navbar {
-      display: flex;
-
-      background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.5));
-      backdrop-filter: blur(10px);
-      color: white;
-      padding: 5px 0;
-      font-size: 0.9rem;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-
-    .navbar-nav .nav-link {
-      color: #303030;
-      padding: 5px 15px;
-    }
-
-    .navbar-nav .nav-link:hover {
-      background-color: rgba(0, 123, 255, 0.1); /* Light blue background on hover */
-      color: #007bff; /* Darker text color for contrast */
-      border-radius: 5px; /* Optional: Adds rounded corners to the background */
-      transform: scale(1.05); /* Slight increase in size */
-      transition: all 0.3s ease-in-out; /* Smooth transition for the hover effect */
-    }
-
-    .dropdown-item:hover {
-      background-color: rgba(0, 123, 255, 0.1); /* Light blue background on hover */
-      color: #007bff; /* Darker blue for text for better visibility */
-      border-radius: 5px; /* Optional: Adds rounded corners */
-      transition: background-color 0.3s ease; /* Smooth transition for the background color */
-    }
-
-    .social-media-links a:hover {
-      background-color: rgba(0, 123, 255, 0.2); /* Slightly different to give a subtle effect */
-      transform: scale(1.1); /* Slightly larger scale for emphasis */
-      transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition for both properties */
-      border-radius: 50%; /* Assuming icons are circular, this enhances that appearance */
-    }
-
-    .main-title {
-      font-size: 76px; /* Adjust the font size as needed */
-    }
-
-    /*Button CSS */
-    .mainButton {
-      background-image: linear-gradient(92.88deg, #455EB5 9.16%, #5643CC 43.89%, #673FD7 64.72%);
-      border-radius: 8px;
-      border-style: none;
-      box-sizing: border-box;
-      color: #FFFFFF;
-      cursor: pointer;
-      flex-shrink: 0;
-      font-family: "Inter UI","SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
-      font-size: 28px;
-      font-weight: 500;
-      height: 4rem;
-      padding: 0 3.5rem;
-      text-align: center;
-      text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
-      transition: all .5s;
-      user-select: none;
-      -webkit-user-select: none;
-      touch-action: manipulation;
-    }
-
-    .mainButton:hover {
-      box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
-      transition-duration: .1s;
-    }
-
-    @media (min-width: 768px) {
-      .mainButton {
-        padding: 0 2.6rem;
+      #about {
+        background-image: url("images/clingmans-dome-at-sunset-great-smoky-mountains-wallpaper-eb266c0db3412f9935e4eb09dd8c7ca0.jpg");
+        border-radius: 20px; /* Adds rounded corners to the element */
+        overflow: hidden; /* Ensures that the content does not overflow the rounded corners */
       }
-    }
 
+      #education {
+        background-image: url("images/header-faculty-staff.jpg");
+      }
 
-    .section {
-      padding: 20px;
-      min-height: 400px;
-      background-size: cover;
-      color: white;
-    }
+      #work {
+        background-image: url("images/pexels-codioful-(formerly-gradienta)-7130469.jpg");
+      }
 
-        #about {
-          background-image: url('images/clingmans-dome-at-sunset-great-smoky-mountains-wallpaper-eb266c0db3412f9935e4eb09dd8c7ca0.jpg');
-        }
+      #projects {
+        background-image: url("images/fukuoka-fukuoka-tower-sunset-tower-antenna-japan-463815eefbe3045ea27586028f0e085a.jpg");
+      }
 
-        #education {
-          background-image: url('images/header-faculty-staff.jpg');
-        }
+      #language {
+        background-image: url("https://www.esl-languages.com/sites/default/files/city/gallery/esl-fukuoka-language-stay-hero.jpg");
+      }
 
-        #work {
-          background-image: url('images/pexels-codioful-(formerly-gradienta)-7130469.jpg');
-        }
-
-        #projects {
-          background-image: url('images/fukuoka-fukuoka-tower-sunset-tower-antenna-japan-463815eefbe3045ea27586028f0e085a.jpg');
-        }
-
-        #language {
-          background-image: url('https://www.esl-languages.com/sites/default/files/city/gallery/esl-fukuoka-language-stay-hero.jpg');
-        }
-
-        #other {
-          background-image: url('https://www.visittheusa.com/sites/default/files/styles/hero_l/public/images/hero_media_image/2023-07/2e82bbc2-3c5f-4e51-9e64-a3ebedbd559d.jpeg?h=de10ecfe&itok=s18DYClQ');
-        }
-  </style>
+      #other {
+        background-image: url("https://www.visittheusa.com/sites/default/files/styles/hero_l/public/images/hero_media_image/2023-07/2e82bbc2-3c5f-4e51-9e64-a3ebedbd559d.jpeg?h=de10ecfe&itok=s18DYClQ");
+      }
+    </style>
 
     <nav class="navbar fixed-top navbar-expand-lg navbar-light">
-      <button class="navbar-toggler" type="button" data-toggle="collapse"
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
         data-target="#navbarSupportedContent1"
-        aria-controls="navbarSupportedContent1" aria-expanded="false"
-        aria-label="Toggle navigation">
+        aria-controls="navbarSupportedContent1"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
       <div
         class="collapse navbar-collapse text-dark bg-transparent justify-content-center"
-        id="navbarSupportedContent1">
-        <ul class="navbar-nav mx-auto ">
-
+        id="navbarSupportedContent1"
+      >
+        <ul class="navbar-nav mx-auto">
           <li class="nav-item active">
             <a class="nav-link text-dark" href="index.html">
-                <img src="apple-icon.png" alt="Home" style="height: 20px; width: auto; margin-right: 5px;"> Home <span class="sr-only">(current)</span>
+              <img
+                src="apple-icon.png"
+                alt="Home"
+                style="height: 20px; width: auto; margin-right: 5px"
+              />
+              ホーム
+              <span class="sr-only">(current)</span>
             </a>
           </li>
 
-          <li class="nav-item"> <a class="nav-link text-dark"
-              href="education.html">Education</a> </li>
-          <li class="nav-item"> <a class="nav-link text-dark"
-              href="work.html">Work History</a> </li>
-          <li class="nav-item"> <a class="nav-link text-dark"
-              href="projects.html">Projects</a> </li>
-          <li class="nav-item"> <a class="nav-link text-dark"
-              href="language.html">Language Study</a> </li>
-          <li class="nav-item"> <a class="nav-link text-dark"
-              href="other.html">Other</a> </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="education.html">教育</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="work.html">職務経歴</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="projects.html">プロジェクト</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="language.html"
+              >言語学習</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="other.html">その他</a>
+          </li>
 
-          <li class="nav-item"> <a class="nav-link text-dark" href="../index.html">English Version</a> </li>
+          <li class="nav-item">
+            <a class="nav-item"> <a class="nav-link text-dark" href="../index.html">English Version</a>
+          </li>
 
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-dark" href="#"
-              id="navbarDropdown1" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false"> Dropdown </a>
+            <a
+              class="nav-link dropdown-toggle text-dark"
+              href="#"
+              id="navbarDropdown1"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+            ドロップダウン
+            </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
-              <a class="dropdown-item"
-                href="https://www.paypal.com/donate/?business=B6GXXULAEPFF2&no_recurring=0&currency_code=USD">Donate
-                to Dillan</a>
-              <a class="dropdown-item"
-                href="https://tools.tastethecode.com/youtube-latest/r/raydillanv">My
-                Latest Video</a>
+              <a
+                class="dropdown-item"
+                href="https://www.paypal.com/donate/?business=B6GXXULAEPFF2&no_recurring=0&currency_code=USD"
+                >ディランへの寄付</a
+              >
+              <a
+                class="dropdown-item"
+                href="https://tools.tastethecode.com/youtube-latest/r/raydillanv"
+                >最新の動画</a
+              >
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item"
-                href="https://github.com/raydillanv">Dillan's GitHub</a>
+              <a class="dropdown-item" href="https://github.com/raydillanv"
+                >ディランのGitHub</a
+              >
             </div>
           </li>
         </ul>
       </div>
     </nav>
 
-
-    
-
     <section class="text-center mt-2">
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <h1 class="main-title">Dillan Ray Victory.</h1>
-            <p>Japanese page for Dillan Computer Science Major | 日本語も勉強しています。</p>
-            <p><a class="mainButton"
+            <h1 class="main-title">ビクトリー・レイ・ディラン。</h1>
+            <p>コンピュータサイエンス専攻、副専攻は日本語です。</p>
+            <p>
+              <a
+                class="mainButton"
                 href="https://www.linkedin.com/in/dillanvictory/"
-                role="button">My LinkedIn »</a></p>
+                role="button"
+                >リンクトイン »</a
+              >
+            </p>
           </div>
         </div>
       </div>
@@ -198,73 +153,153 @@
     <section class="container">
       <div class="row">
         <div class="col-12 text-center">
-          <h2>Latest Work</h2>
-          <p>Studying Computer Science at Belmont and Strathclyde. Japanese</p>
+          <h2>最新の開発物</h2>
+          <p>現在、ベルモント大学の学部生として在籍しており、専攻はコンピュータサイエンスで、副専攻は日本語です。</p>
         </div>
       </div>
     </section>
 
     <div class="container">
       <div id="about" class="section">
-        <h1>About Me</h1>
-        <p>I am currently in undergrad at Belmont University; I major in
-          Computer Science and Minor in Japanese.</p>
-        <details>
-          <summary>What is the meaning of life?<span
-              class="icon">👇</span></summary>
-          <p>42</p>
-        </details>
+        <h1>私について</h1>
+        <div class="text-container">
+          <p>ナッシュビル、テネシー、郵便番号 37212 | 電話番号: +1 (615) 542-6709 | メールアドレス: dillanrvictory@gmail.com</p>
+          <ul>
+            <li>
+              ベルモント大学、ナッシュビル、テネシー、フルタイム - 2022年8月から現在まで
+            </li>
+          </ul>
+
+          現在、ベルモント大学の学部生として在籍しており、専攻はコンピュータサイエンスで、副専攻は日本語です。
+        </div>
       </div>
     </div>
 
-
-    <footer style="text-align: center; padding: 10px;">
-      <div class="social-media-links" style="margin-bottom: 10px;">
-        <a href="https://www.instagram.com/raydillanv/" target="_blank"
-          style="margin-right: 2px; display: inline-block; width: 5%;">
-          <img src="images/tBxa1IFcTQH.png" alt="Instagram"
-            style="width: 100%; height: auto; max-width: 40px;" />
-        </a>
-        <a href="https://discord.gg/dDMxsRqN7Z" target="_blank"
-          style="margin-right: 2px; display: inline-block; width: 5%;">
-          <img src="images/icon_clyde_blurple_RGB.png" alt="Instagram"
-            style="width: 100%; height: auto; max-width: 40px;" />
-        </a>
-        <a href="https://twitter.com/DillanVictory" target="_blank"
-          style="margin-right: 2px; display: inline-block; width: 5%;">
-          <img src="images/X-logo-transparent-black-twitter.png" alt="Instagram"
-            style="width: 100%; height: auto; max-width: 40px;" />
-        </a>
-        <a href="https://www.linkedin.com/in/dillanvictory/" target="_blank"
-          style="margin-right: 2px; display: inline-block; width: 5%;">
-          <img src="images/LinkedIn_icon_circle.svg.png" alt="LinkedIn"
-            style="width: 100%; height: auto; max-width: 40px;" />
-        </a>
-        <a href="https://www.youtube.com/channel/UCZcnbssSYX67ztziXTp-oqQ"
+    <footer style="text-align: center; padding: 10px">
+      <div class="social-media-links" style="margin-bottom: 10px">
+        <a
+          href="https://www.instagram.com/raydillanv/"
           target="_blank"
-          style="margin-right: 2px; display: inline-block; width: 5%;">
-          <img src="images/free-youtube-logo-icon-2431-thumb.png" alt="YouTube"
-            style="width: 100%; height: auto; max-width: 40px;" />
+          style="margin-right: 2px; display: inline-block; width: 5%"
+        >
+          <img
+            src="images/tBxa1IFcTQH.png"
+            alt="Instagram"
+            style="width: 100%; height: auto; max-width: 40px"
+          />
         </a>
-        <a href="https://github.com/raydillanv" target="_blank"
-          style="margin-right: 2px; display: inline-block; width: 5%;">
-          <img src="images/25231.png" alt="GitHub"
-            style="width: 100%; height: auto; max-width: 40px;" />
+        <a
+          href="https://discord.gg/dDMxsRqN7Z"
+          target="_blank"
+          style="margin-right: 2px; display: inline-block; width: 5%"
+        >
+          <img
+            src="images/icon_clyde_blurple_RGB.png"
+            alt="Instagram"
+            style="width: 100%; height: auto; max-width: 40px"
+          />
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/dillanvictory/"
+          target="_blank"
+          style="margin-right: 2px; display: inline-block; width: 5%"
+        >
+          <img
+            src="images/LinkedIn_icon_circle.svg.png"
+            alt="LinkedIn"
+            style="width: 100%; height: auto; max-width: 40px"
+          />
+        </a>
+        <a
+          href="https://www.youtube.com/channel/UCZcnbssSYX67ztziXTp-oqQ"
+          target="_blank"
+          style="margin-right: 2px; display: inline-block; width: 5%"
+        >
+          <img
+            src="images/free-youtube-logo-icon-2431-thumb.png"
+            alt="YouTube"
+            style="width: 100%; height: auto; max-width: 40px"
+          />
+        </a>
+        <a
+          href="https://github.com/raydillanv"
+          target="_blank"
+          style="margin-right: 2px; display: inline-block; width: 5%"
+        >
+          <img
+            src="images/25231.png"
+            alt="GitHub"
+            style="width: 100%; height: auto; max-width: 40px"
+          />
+        </a>
+        <a
+          href="https://twitter.com/DillanVictory"
+          target="_blank"
+          style="margin-right: 2px; display: inline-block; width: 5%"
+        >
+          <img
+            src="images/X-logo-transparent-black-twitter.png"
+            alt="Instagram"
+            style="width: 100%; height: auto; max-width: 40px"
+          />
         </a>
         <a
           href="https://www.paypal.com/donate/?business=B6GXXULAEPFF2&no_recurring=0&currency_code=USD"
           target="_blank"
-          style="margin-right: 2px; display: inline-block; width: 5%;">
-          <img src="images/paypal.png" alt="GitHub"
-            style="width: 100%; height: auto; max-width: 40px;" />
+          style="margin-right: 2px; display: inline-block; width: 5%"
+        >
+          <img
+            src="images/paypal.png"
+            alt="GitHub"
+            style="width: 100%; height: auto; max-width: 40px"
+          />
         </a>
       </div>
-      <p style="margin: 0; font-size: 1.5vw;">Dillan R. Victory &copy; 2024</p>
+      <p class="copyright-footer">
+        著作権 &copy; 2024年
+        <a href="mailto:dillanrvictory@gmail.com">ビクトリー・レイ・ディラン</a>。全ての権利を保有。
+      </p>
+      
     </footer>
 
     <!-- jQuery and Bootstrap JS -->
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/popper.min.js"></script>
+
     <script src="js/bootstrap-4.4.1.js"></script>
+    <script>
+      // Function to change the icon images in dark mode
+      function updateIconsForDarkMode() {
+        if (
+          window.matchMedia &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches
+        ) {
+          // If user prefers dark mode, change the icons
+          document.querySelector(
+            'a[href="https://twitter.com/DillanVictory"] img'
+          ).src = "images/x-twitter-logo-white.png"; // Update the source for the Twitter icon
+          document.querySelector(
+            'a[href="https://github.com/raydillanv"] img'
+          ).src = "images/github-white-icon.png"; // Update the source for the GitHub icon
+        } else {
+          // If user prefers light mode, keep or set the icons to their light mode versions
+          document.querySelector(
+            'a[href="https://twitter.com/DillanVictory"] img'
+          ).src = "images/X-logo-transparent-black-twitter.png"; // Path to your light mode Twitter icon
+          document.querySelector(
+            'a[href="https://github.com/raydillanv"] img'
+          ).src = "images/25231.png"; // Path to your light mode GitHub icon
+        }
+      }
+
+      // Call the function to ensure icons are set correctly on initial load
+      updateIconsForDarkMode();
+
+      // Add a listener to change icons when the system theme changes
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .addListener(updateIconsForDarkMode);
+    </script>
   </body>
 </html>
