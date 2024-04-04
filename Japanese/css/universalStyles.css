@@ -71,7 +71,14 @@ html {
 }
 
 .main-title {
-  font-size: 76px; /* Adjust the font size as needed */
+  font-size: 76px; /* Default font size for larger screens */
+}
+
+/* Media query for screens narrower than 600px */
+@media (max-width: 600px) {
+  .main-title {
+    font-size: 36px; /* Smaller font size for mobile devices */
+  }
 }
 
 /*Button CSS */

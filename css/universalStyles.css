@@ -71,7 +71,14 @@ html {
 }
 
 .main-title {
-  font-size: 76px; /* Adjust the font size as needed */
+  font-size: 76px; /* Default font size for larger screens */
+}
+
+/* Media query for screens narrower than 600px */
+@media (max-width: 600px) {
+  .main-title {
+    font-size: 36px; /* Smaller font size for mobile devices */
+  }
 }
 
 /*Button CSS */
@@ -144,6 +151,7 @@ html {
 
 /* Light mode styles are your default styles, so no changes are needed for them here. */
 
+
 /* Dark mode styles */
 @media (prefers-color-scheme: dark) {
   body,
@@ -156,6 +164,7 @@ html {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
     color: #e0e0e0;
   }
+
 
   .navbar-nav .nav-link,
   .dropdown-item,
