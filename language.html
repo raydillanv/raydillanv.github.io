@@ -50,6 +50,14 @@
         border-radius: 20px; /* Adds rounded corners to the element */
         overflow: hidden; /* Ensures that the content does not overflow the rounded corners */
       }
+      .emoji {
+        font-size: 50px;
+        position: absolute;
+        z-index: 9999;        /* Ensure emojis are on top of other content */
+        pointer-events: none; /* Prevent interaction */
+        top: 0;
+        left: 0;
+      }
     </style>
 
 <nav class="navbar fixed-top navbar-expand-lg navbar-light">
@@ -163,7 +171,10 @@
           <p>Nashville TN 37212 | (615) 542-6709 | dillanrvictory@gmail.com</p>
           <ul>
             <li>
-              Japanese 2 years
+              <b>French:</b> During freshman year of high school (2018), I began studying French, and continued for 4 years. Here is where my love for languages began.
+            </li>
+            <li>
+              <b>Japanese:</b> Later in life, during my freshman year of college (2022), I began studying Japanese. I have been studying Japanese for 2 years now.
             </li>
           </ul>
 
@@ -263,6 +274,8 @@
       </p>
     </footer>
 
+    <!-- Falling Emojis -->
+    <script src="js/emoji.js"></script>
     <!-- jQuery and Bootstrap JS -->
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/popper.min.js"></script>

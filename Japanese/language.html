@@ -50,6 +50,14 @@
         border-radius: 20px; /* Adds rounded corners to the element */
         overflow: hidden; /* Ensures that the content does not overflow the rounded corners */
       }
+      .emoji {
+        font-size: 50px;
+        position: absolute;
+        z-index: 9999;        /* Ensure emojis are on top of other content */
+        pointer-events: none; /* Prevent interaction */
+        top: 0;
+        left: 0;
+      }
     </style>
 
 <nav class="navbar fixed-top navbar-expand-lg navbar-light">
@@ -163,7 +171,10 @@
               <p>テネシー州ナッシュビル、郵便番号 37212 | 電話番号: +1 (615) 542-6709 | メールアドレス: dillanrvictory@gmail.com</p>
               <ul>
                 <li>
-                  私は日本語を約2年間勉強してきました。
+                  <b>フランス語:</b> 高校1年生の時（2018年）にフランス語の学習を始め、4年間続けました。ここから私の語学への愛が始まりました
+                </li>
+                <li>
+                  <b>日本語:</b> その後、大学1年生の時（2022年）に日本語の学習を始めました。現在まで2年間日本語を勉強しています。
                 </li>
               </ul>
     
@@ -263,6 +274,8 @@
       
     </footer>
 
+    <!-- Falling Emojis -->
+    <script src="js/emoji.js"></script>
     <!-- jQuery and Bootstrap JS -->
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/popper.min.js"></script>
