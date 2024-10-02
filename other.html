@@ -55,6 +55,14 @@
         border-radius: 20px; /* Adds rounded corners to the element */
         overflow: hidden; /* Ensures that the content does not overflow the rounded corners */
       }
+      .emoji {
+        font-size: 50px;
+        position: fixed;
+        z-index: 9999;        /* Ensure emojis are on top of other content */
+        pointer-events: none; /* Prevent interaction */
+        top: 0;
+        left: 0;
+      }
     </style>
 
 <nav class="navbar fixed-top navbar-expand-lg navbar-light">
@@ -162,10 +170,16 @@
         <h1>Other</h1>
         <div class="text-container">
           <p>Nashville TN 37212 | dillanrvictory@gmail.com</p>
-          
+        </div>
+        <h1>Miscellaneous</h1>
+        <div class="text-container">
+          <p>Effects: Snow</p>
         </div>
       </div>
+      
     </div>
+
+    
 
     <footer style="text-align: center; padding: 10px">
       <div class="social-media-links" style="margin-bottom: 10px">
@@ -254,6 +268,9 @@
         reserved.
       </p>
     </footer>
+
+    <!-- Falling Emojis -->
+    <script src="js/emojiOther.js"></script>
 
     <!-- jQuery and Bootstrap JS -->
     <script src="js/jquery-3.4.1.min.js"></script>
