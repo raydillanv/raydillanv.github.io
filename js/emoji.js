@@ -19,7 +19,7 @@ function createEmoji() {
         element: emoji,
         x: Math.random() * window.innerWidth,  // Random horizontal position
         y: Math.random() * -window.innerHeight,  // Start above the top of the screen
-        speed: Math.random() * 2 + 4.5,  // Adjust fall speed (slower)
+        speed: Math.random() * 2 + 1.8,  // Adjust fall speed (slower)
         rotation: Math.random() * 360,
         rotationSpeed: Math.random() * 1 + 0.5  // Slower rotation speed
     };
