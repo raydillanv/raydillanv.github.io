@@ -50,6 +50,17 @@
         border-radius: 20px; /* Adds rounded corners to the element */
         overflow: hidden; /* Ensures that the content does not overflow the rounded corners */
       }
+      .largeImage {
+        display: none;
+        margin-top: 10px;
+        max-width: 100%;
+      }
+      .loadButton {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        margin: 5px;
+      }
     </style>
 
 <nav class="navbar fixed-top navbar-expand-lg navbar-light">
@@ -158,7 +169,6 @@
       <div id="projects" class="section">
         <h1>Projects</h1>
         <div class="text-container">
-          <p>Nashville TN 37212 | dillanrvictory@gmail.com</p>
           <ul>
             <li>
               Latest projects can be found on my GitHub page.
@@ -168,6 +178,40 @@
                 role="button">My Github »
             </a>
           </ul>
+        </div>
+        <h1>Codename: Project Jagir</h1>
+        <div class="text-container">
+          <p>A game built with horror and RPG elements in Unreal Engine 5.</p>
+          <p style="text-indent: 50px;">Everything shown is still under active development and subject to change.</p>
+
+          <p>Sneak peeks: </p>
+          <p style="text-indent: 50px;"><em>(Images are high resoulution 2560 x 1440. To save resources please load images as needed.)</em></p>
+          
+          <ul>
+            <li>
+              <button class="mainButton loadButton" data-src="images/demoImages/road.png">Load image 1</button>
+              <img class="largeImage" alt="Large Image 1" />
+            </li>
+            <li>
+              <button class="mainButton loadButton" data-src="images/demoImages/corner.png">Load image 2</button>
+              <img class="largeImage" alt="Large Image 2" />
+            </li>
+            <li>
+              <button class="mainButton loadButton" data-src="images/demoImages/otherSide.png">Load image 3</button>
+              <img class="largeImage" alt="Large Image 3" />
+            </li>
+            <li>
+              <button class="mainButton loadButton" data-src="images/demoImages/sky.png">Load image 4</button>
+              <img class="largeImage" alt="Large Image 4" />
+            </li>
+          </ul>
+          <p class="copyright-footer">
+            Unless stated otherwise, images and materials shown from projects are under copyright protection. Copyright &copy; 2024
+            <a href="mailto:dillanrvictory@gmail.com">Dillan Victory</a>. All rights
+            reserved.
+          </p>
+
+          
         </div>
       </div>
     </div>
@@ -259,6 +303,28 @@
         reserved.
       </p>
     </footer>
+    <!-- Load Images -->
+    <script>
+      const buttons = document.querySelectorAll(".loadButton");
+  
+      buttons.forEach(button => {
+        button.addEventListener("click", function() {
+          const img = this.nextElementSibling; // Get the next img element
+          const imageSource = this.getAttribute("data-src");
+          let isLoaded = img.style.display === "block"; // Check if image is currently loaded
+  
+          if (isLoaded) {
+            img.style.display = "none"; // Hide the image
+            img.src = ""; // Reset the src to unload the image
+            this.innerText = `Load Image ${this.textContent.slice(-1)}`; // Reset button text
+          } else {
+            img.src = imageSource; // Set the src from data attribute
+            img.style.display = "block"; // Show the image
+            this.innerText = `Press to unload Image ${this.textContent.slice(-1)}`; // Change button text
+          }
+        });
+      });
+    </script>
 
     <!-- jQuery and Bootstrap JS -->
     <script src="js/jquery-3.4.1.min.js"></script>
