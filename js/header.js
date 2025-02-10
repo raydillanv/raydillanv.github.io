@@ -65,7 +65,7 @@ let headerContent = `
               <a
                 class="dropdown-item"
                 href="https://www.paypal.com/donate/?business=B6GXXULAEPFF2&no_recurring=0&currency_code=USD"
-                >Donate to Dillan</a
+                >Support My Projects</a
               >
               <a
                 class="dropdown-item"
