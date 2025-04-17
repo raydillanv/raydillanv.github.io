@@ -1,11 +1,15 @@
 [
-{"name":"Information.html","url":"Information.html"},
 {"name":"Old","url":"Old"},
 {"name":"css","url":"css"},
+{"name":"education.html","url":"education.html"},
 {"name":"images","url":"images"},
 {"name":"index.html","url":"index.html"},
 {"name":"js","url":"js"},
+{"name":"language.html","url":"language.html"},
 {"name":"modified_index.html","url":"modified_index.html"},
+{"name":"other.html","url":"other.html"},
+{"name":"projects.html","url":"projects.html"},
 {"name":"raydillanv.github.io.iml","url":"raydillanv.github.io.iml"},
-{"name":"websiteCode","url":"websiteCode"}
+{"name":"websiteCode","url":"websiteCode"},
+{"name":"work.html","url":"work.html"}
 ]

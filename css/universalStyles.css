@@ -1,0 +1,261 @@
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.5)
+  );
+  backdrop-filter: blur(10px);
+  color: white;
+  padding: 5px 0;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-nav .nav-link {
+  color: #303030;
+  padding: 5px 15px;
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: rgba(
+    0,
+    123,
+    255,
+    0.1
+  ); /* Light blue background on hover */
+  color: #007bff; /* Darker text color for contrast */
+  border-radius: 5px; /* Optional: Adds rounded corners to the background */
+  transform: scale(1.05); /* Slight increase in size */
+  transition: all 0.3s ease-in-out; /* Smooth transition for the hover effect */
+}
+
+.dropdown-item:hover {
+  background-color: rgba(
+    0,
+    123,
+    255,
+    0.1
+  ); /* Light blue background on hover */
+  color: #007bff; /* Darker blue for text for better visibility */
+  border-radius: 5px; /* Optional: Adds rounded corners */
+  transition: background-color 0.3s ease; /* Smooth transition for the background color */
+}
+
+.dropdown-menu {
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.5)
+  );
+  backdrop-filter: blur(10px);
+}
+
+.social-media-links a:hover {
+  background-color: rgba(
+    0,
+    123,
+    255,
+    0.2
+  ); /* Slightly different to give a subtle effect */
+  transform: scale(1.1); /* Slightly larger scale for emphasis */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition for both properties */
+  border-radius: 50%; /* Assuming icons are circular, this enhances that appearance */
+}
+
+.main-title {
+  font-size: 76px; /* Default font size for larger screens */
+}
+
+/* Media query for screens narrower than 600px */
+@media (max-width: 600px) {
+  .main-title {
+    font-size: 36px; /* Smaller font size for mobile devices */
+  }
+}
+
+/*Button CSS */
+.mainButton {
+  background-image: linear-gradient(
+    92.88deg,
+    #455eb5 9.16%,
+    #5643cc 43.89%,
+    #673fd7 64.72%
+  );
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  flex-shrink: 0;
+  font-family: "Inter UI", "SF Pro Display", -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+    "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 28px;
+  font-weight: 500;
+  height: 4rem;
+  padding: 0 3.5rem;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+  transition: all 0.5s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.mainButton:hover {
+  box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
+  transition-duration: 0.1s;
+}
+
+@media (min-width: 768px) {
+  .mainButton {
+    padding: 0 2.6rem;
+  }
+}
+
+.text-container {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.773
+  ); /* Grey with 50% opacity */
+  color: rgb(0, 0, 0);
+  padding: 20px;
+  border-radius: 20px; /* Adds rounded corners to the element */
+  overflow: hidden;
+}
+
+.copyright-footer {
+  border-top: 1px solid #cccccc; /* Thin light grey line */
+  padding-top: 10px; /* Space above the text */
+  margin-top: 10px; /* Space between the line and social media links */
+  margin: 0;
+  font-size: 0.9vw;
+}
+
+.section {
+  padding: 20px;
+  min-height: 400px;
+  background-size: cover;
+  color: white;
+}
+
+/* Light mode styles are your default styles, so no changes are needed for them here. */
+
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+  body,
+  html {
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Lighter text */
+  }
+
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+
+  .navbar {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+    color: #e0e0e0;
+  }
+
+
+  .navbar-nav .nav-link,
+  .dropdown-item,
+  .nav-link.text-dark {
+    color: #e0e0e0; /* Lighter text color */
+  }
+
+  .text-container {
+    background-color: rgba(0, 0, 0, 0.773); /* Darker background */
+    color: #e0e0e0; /* Lighter text color */
+  }
+
+  .section,
+  .navbar-light .navbar-nav .nav-link {
+    color: #e0e0e0; /* Lighter text color for readability */
+  }
+
+  .mainButton {
+    background-image: linear-gradient(
+      92.88deg,
+      #233b55 9.16%,
+      #343d5c 43.89%,
+      #454e67 64.72%
+    );
+    color: #ffffff; /* Keeping the button text white for contrast */
+  }
+
+  .navbar .navbar-nav .nav-link {
+    color: #ffffff !important; /* Force white text color */
+  }
+
+  .dropdown-menu {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+    backdrop-filter: blur(10px);
+    color: #e0e0e0; /* Adjusting the text color for visibility */
+  }
+
+  .dropdown-item {
+    color: #e0e0e0; /* Ensuring dropdown items are also light colored for dark mode */
+  }
+
+  .dropdown-item:hover {
+    background-color: rgba(
+      255,
+      255,
+      255,
+      0.1
+    ); /* Lighter background on hover for contrast */
+    color: #ffffff; /* Adjust hover color for visibility */
+  }
+
+  /* Adjust further elements as needed */
+}
+
+#about {
+  background-image: url("images/clingmans-dome-at-sunset-great-smoky-mountains-wallpaper-eb266c0db3412f9935e4eb09dd8c7ca0.jpg");
+  border-radius: 20px; /* Adds rounded corners to the element */
+  overflow: hidden; /* Ensures that the content does not overflow the rounded corners */
+}
+
+#education {
+  background-image: url("images/header-faculty-staff.jpg");
+  border-radius: 20px; /* Adds rounded corners to the element */
+  overflow: hidden; /* Ensures that the content does not overflow the rounded corners */
+}
+
+#work {
+  background-image: url("images/pexels-codioful-(formerly-gradienta)-7130469.jpg");
+  border-radius: 20px; /* Adds rounded corners to the element */
+  overflow: hidden; /* Ensures that the content does not overflow the rounded corners */
+}
+
+#projects {
+  background-image: url("images/fukuoka-fukuoka-tower-sunset-tower-antenna-japan-463815eefbe3045ea27586028f0e085a.jpg");
+  border-radius: 20px; /* Adds rounded corners to the element */
+  overflow: hidden; /* Ensures that the content does not overflow the rounded corners */
+}
+
+#language {
+  background-image: url("https://www.esl-languages.com/sites/default/files/city/gallery/esl-fukuoka-language-stay-hero.jpg");
+  border-radius: 20px; /* Adds rounded corners to the element */
+  overflow: hidden; /* Ensures that the content does not overflow the rounded corners */
+}
+
+#other {
+  background-image: url("https://www.visittheusa.com/sites/default/files/styles/hero_l/public/images/hero_media_image/2023-07/2e82bbc2-3c5f-4e51-9e64-a3ebedbd559d.jpeg?h=de10ecfe&itok=s18DYClQ");
+  border-radius: 20px; /* Adds rounded corners to the element */
+  overflow: hidden; /* Ensures that the content does not overflow the rounded corners */
+}
+
