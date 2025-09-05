@@ -1,131 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <title>About Dillan Victory</title>
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/universalStyles.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <!-- Additional icons and manifest for a coherent look across devices -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#ffffff">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/apple-icon-180x180.png"
+    />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#ffffff" />
   </head>
   <body style="padding-top: 70px">
     <style>
 
       #about {
-        background-image: url("images/clingmans-dome-at-sunset-great-smoky-mountains-wallpaper-eb266c0db3412f9935e4eb09dd8c7ca0.jpg");
+        background: linear-gradient(to bottom right, #fa4de8, #4a6df9, #e9304f);
         border-radius: 20px; /* Adds rounded corners to the element */
         overflow: hidden; /* Ensures that the content does not overflow the rounded corners */
       }
 
       #education {
-        background-image: url("images/header-faculty-staff.jpg");
-      }
-
-      #work {
-        background-image: url("images/pexels-codioful-(formerly-gradienta)-7130469.jpg");
-      }
-
-      #projects {
-        background-image: url("images/fukuoka-fukuoka-tower-sunset-tower-antenna-japan-463815eefbe3045ea27586028f0e085a.jpg");
-      }
-
-      #language {
-        background-image: url("https://www.esl-languages.com/sites/default/files/city/gallery/esl-fukuoka-language-stay-hero.jpg");
-      }
-
-      #other {
-        background-image: url("https://www.visittheusa.com/sites/default/files/styles/hero_l/public/images/hero_media_image/2023-07/2e82bbc2-3c5f-4e51-9e64-a3ebedbd559d.jpeg?h=de10ecfe&itok=s18DYClQ");
+        background: linear-gradient(to bottom right, #6358de, #4daac7, #af37c4);
         border-radius: 20px; /* Adds rounded corners to the element */
         overflow: hidden; /* Ensures that the content does not overflow the rounded corners */
       }
+
+      #work {
+        background: linear-gradient(to bottom right, #58de5c, #c7904d, #c43737);
+        border-radius: 20px; /* Adds rounded corners to the element */
+        overflow: hidden; /* Ensures that the content does not overflow the rounded corners */
+      }
+
+      #projects {
+        background: linear-gradient(to bottom right, #de5858, #6d4dc7, #37acc4);
+        border-radius: 20px; /* Adds rounded corners to the element */
+        overflow: hidden; /* Ensures that the content does not overflow the rounded corners */
+      }
+
+      #language {
+        background: linear-gradient(to bottom right, #dea058, #c74d74, #37acc4);
+        border-radius: 20px; /* Adds rounded corners to the element */
+        overflow: hidden; /* Ensures that the content does not overflow the rounded corners */
+      }
+
+      #other {
+        background: linear-gradient(to bottom right, #b1de58, #4dc78e, #37acc4);
+        border-radius: 20px; /* Adds rounded corners to the element */
+        overflow: hidden; /* Ensures that the content does not overflow the rounded corners */
+      }
+      .emoji {
+        font-size: 50px;
+        position: fixed;
+        z-index: 9999;        /* Ensure emojis are on top of other content */
+        pointer-events: none; /* Prevent interaction */
+        top: 0;
+        left: 0;
+      }
     </style>
 
-<nav class="navbar fixed-top navbar-expand-lg navbar-light">
-  <button
-    class="navbar-toggler"
-    type="button"
-    data-toggle="collapse"
-    data-target="#navbarSupportedContent1"
-    aria-controls="navbarSupportedContent1"
-    aria-expanded="false"
-    aria-label="Toggle navigation"
-  >
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div
-    class="collapse navbar-collapse text-dark bg-transparent justify-content-center"
-    id="navbarSupportedContent1"
-  >
-    <ul class="navbar-nav mx-auto">
-      <li class="nav-item active">
-        <a class="nav-link text-dark" href="index.html">
-          <img
-            src="apple-icon.png"
-            alt="Home"
-            style="height: 20px; width: auto; margin-right: 5px"
-          />
-          Home
-          <span class="sr-only"></span>
-        </a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link text-dark" href="education.html">Education</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-dark" href="work.html">Work History</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-dark" href="projects.html">Projects</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-dark" href="language.html"
-          >Language Study</a
-        >
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-dark" href="other.html">Other</a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link text-dark" href="Japanese/other.html">日本語</a>
-      </li>
-
-      <li class="nav-item dropdown">
-        <a
-          class="nav-link dropdown-toggle text-dark"
-          href="#"
-          id="navbarDropdown1"
-          role="button"
-          data-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false"
-        >
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
-          <a
-            class="dropdown-item"
-            href="https://www.paypal.com/donate/?business=B6GXXULAEPFF2&no_recurring=0&currency_code=USD"
-            >Donate to Dillan</a
-          >
-          <a
-            class="dropdown-item"
-            href="https://tools.tastethecode.com/youtube-latest/r/raydillanv"
-            >My Latest Video</a
-          >
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="https://github.com/raydillanv"
-            >Dillan's GitHub</a
-          >
-        </div>
-      </li>
-    </ul>
-  </div>
+<nav class="navbar fixed-top navbar-expand-lg navbar-light justify-content-center">
+  <div id="NavContainer"></div>
+  <script src="js/header.js"></script>
 </nav>
 
 
@@ -135,7 +77,7 @@
         <div class="row">
           <div class="col-12">
             <h1 class="main-title">Dillan Ray Victory.</h1>
-            <p>Computer Science Major with a minor in Japanese.</p>
+            <p>Asian Studies Major with a minor in Japanese and Computer Science.</p>
             <p><a class="mainButton"
                 href="https://www.linkedin.com/in/dillanvictory/"
                 role="button">My LinkedIn »</a></p>
@@ -148,94 +90,17 @@
       <div id="other" class="section">
         <h1>Other</h1>
         <div class="text-container">
-          <p>Nashville TN 37212 | (615) 542-6709 | dillanrvictory@gmail.com</p>
-          <ul>
-            <div class="social-media-links" style="margin-bottom: 10px">
-              <a
-                href="https://www.instagram.com/raydillanv/"
-                target="_blank"
-                style="margin-right: 2px; display: inline-block; width: 5%"
-              >
-                <img
-                  src="images/tBxa1IFcTQH.png"
-                  alt="Instagram"
-                  style="width: 100%; height: auto; max-width: 40px"
-                />
-              </a>
-              <a
-                href="https://discord.gg/dDMxsRqN7Z"
-                target="_blank"
-                style="margin-right: 2px; display: inline-block; width: 5%"
-              >
-                <img
-                  src="images/icon_clyde_blurple_RGB.png"
-                  alt="Instagram"
-                  style="width: 100%; height: auto; max-width: 40px"
-                />
-              </a>
-      
-              <a
-                href="https://www.linkedin.com/in/dillanvictory/"
-                target="_blank"
-                style="margin-right: 2px; display: inline-block; width: 5%"
-              >
-                <img
-                  src="images/LinkedIn_icon_circle.svg.png"
-                  alt="LinkedIn"
-                  style="width: 100%; height: auto; max-width: 40px"
-                />
-              </a>
-              <a
-                href="https://www.youtube.com/channel/UCZcnbssSYX67ztziXTp-oqQ"
-                target="_blank"
-                style="margin-right: 2px; display: inline-block; width: 5%"
-              >
-                <img
-                  src="images/free-youtube-logo-icon-2431-thumb.png"
-                  alt="YouTube"
-                  style="width: 100%; height: auto; max-width: 40px"
-                />
-              </a>
-              <a
-                href="https://github.com/raydillanv"
-                target="_blank"
-                style="margin-right: 2px; display: inline-block; width: 5%"
-              >
-                <img
-                  src="images/25231.png"
-                  alt="GitHub"
-                  style="width: 100%; height: auto; max-width: 40px"
-                />
-              </a>
-              <a
-                href="https://twitter.com/DillanVictory"
-                target="_blank"
-                style="margin-right: 2px; display: inline-block; width: 5%"
-              >
-                <img
-                  src="images/X-logo-transparent-black-twitter.png"
-                  alt="Instagram"
-                  style="width: 100%; height: auto; max-width: 40px"
-                />
-              </a>
-              <a
-                href="https://www.paypal.com/donate/?business=B6GXXULAEPFF2&no_recurring=0&currency_code=USD"
-                target="_blank"
-                style="margin-right: 2px; display: inline-block; width: 5%"
-              >
-                <img
-                  src="images/paypal.png"
-                  alt="GitHub"
-                  style="width: 100%; height: auto; max-width: 40px"
-                />
-              </a>
-            </div>
-          </ul>
-
-          
+          <p>Nashville TN 37212 | dillanrvictory@gmail.com</p>
+        </div>
+        <h1>Miscellaneous</h1>
+        <div class="text-container">
+          <p>Effects: Snow</p>
         </div>
       </div>
+      
     </div>
+
+    
 
     <footer style="text-align: center; padding: 10px">
       <div class="social-media-links" style="margin-bottom: 10px">
@@ -319,16 +184,20 @@
         </a>
       </div>
       <p class="copyright-footer">
-        Copyright &copy; 2024
+        Copyright &copy; 2025
         <a href="mailto:dillanrvictory@gmail.com">Dillan Victory</a>. All rights
         reserved.
       </p>
     </footer>
 
+    <!-- Falling Emojis -->
+    <script src="js/emojiOther.js"></script>
+
     <!-- jQuery and Bootstrap JS -->
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/popper.min.js"></script>
-    <script src=js/bootstrap-4.4.1.js></script>
+
+    <script src="js/bootstrap-4.4.1.js"></script>
     <script>
       // Function to change the icon images in dark mode
       function updateIconsForDarkMode() {

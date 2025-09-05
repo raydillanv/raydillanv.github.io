@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="jp">
   <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
@@ -16,114 +16,53 @@
     <style>
 
       #about {
-        background-image: url("images/clingmans-dome-at-sunset-great-smoky-mountains-wallpaper-eb266c0db3412f9935e4eb09dd8c7ca0.jpg");
+        background: linear-gradient(to bottom right, #fa4de8, #4a6df9, #e9304f);
         border-radius: 20px; /* Adds rounded corners to the element */
         overflow: hidden; /* Ensures that the content does not overflow the rounded corners */
       }
 
       #education {
-        background-image: url("images/header-faculty-staff.jpg");
+        background: linear-gradient(to bottom right, #6358de, #4daac7, #af37c4);
+        border-radius: 20px; /* Adds rounded corners to the element */
+        overflow: hidden; /* Ensures that the content does not overflow the rounded corners */
       }
 
       #work {
-        background-image: url("images/pexels-codioful-(formerly-gradienta)-7130469.jpg");
+        background: linear-gradient(to bottom right, #58de5c, #c7904d, #c43737);
+        border-radius: 20px; /* Adds rounded corners to the element */
+        overflow: hidden; /* Ensures that the content does not overflow the rounded corners */
       }
 
       #projects {
-        background-image: url("images/fukuoka-fukuoka-tower-sunset-tower-antenna-japan-463815eefbe3045ea27586028f0e085a.jpg");
+        background: linear-gradient(to bottom right, #de5858, #6d4dc7, #37acc4);
+        border-radius: 20px; /* Adds rounded corners to the element */
+        overflow: hidden; /* Ensures that the content does not overflow the rounded corners */
       }
 
       #language {
-        background-image: url("https://www.esl-languages.com/sites/default/files/city/gallery/esl-fukuoka-language-stay-hero.jpg");
+        background: linear-gradient(to bottom right, #dea058, #c74d74, #37acc4);
+        border-radius: 20px; /* Adds rounded corners to the element */
+        overflow: hidden; /* Ensures that the content does not overflow the rounded corners */
       }
 
       #other {
-        background-image: url("https://www.visittheusa.com/sites/default/files/styles/hero_l/public/images/hero_media_image/2023-07/2e82bbc2-3c5f-4e51-9e64-a3ebedbd559d.jpeg?h=de10ecfe&itok=s18DYClQ");
+        background: linear-gradient(to bottom right, #b1de58, #4dc78e, #37acc4);
+        border-radius: 20px; /* Adds rounded corners to the element */
+        overflow: hidden; /* Ensures that the content does not overflow the rounded corners */
+      }
+      .emoji {
+        font-size: 50px;
+        position: fixed;
+        z-index: 9999;        /* Ensure emojis are on top of other content */
+        pointer-events: none; /* Prevent interaction */
+        top: 0;
+        left: 0;
       }
     </style>
 
-<nav class="navbar fixed-top navbar-expand-lg navbar-light">
-  <button
-    class="navbar-toggler"
-    type="button"
-    data-toggle="collapse"
-    data-target="#navbarSupportedContent1"
-    aria-controls="navbarSupportedContent1"
-    aria-expanded="false"
-    aria-label="Toggle navigation"
-  >
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div
-    class="collapse navbar-collapse text-dark bg-transparent justify-content-center"
-    id="navbarSupportedContent1"
-  >
-    <ul class="navbar-nav mx-auto">
-      <li class="nav-item active">
-        <a class="nav-link text-dark" href="index.html">
-          <img
-            src="apple-icon.png"
-            alt="Home"
-            style="height: 20px; width: auto; margin-right: 5px"
-          />
-          ホーム
-          <span class="sr-only"></span>
-        </a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link text-dark" href="education.html">教育</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-dark" href="work.html">職務経歴</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-dark" href="projects.html">プロジェクト</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-dark" href="language.html"
-          >言語学習</a
-        >
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-dark" href="other.html">その他</a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-item"> <a class="nav-link text-dark" href="../other.html">English Version</a>
-      </li>
-
-      <li class="nav-item dropdown">
-        <a
-          class="nav-link dropdown-toggle text-dark"
-          href="#"
-          id="navbarDropdown1"
-          role="button"
-          data-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false"
-        >
-        ドロップダウン
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
-          <a
-            class="dropdown-item"
-            href="https://www.paypal.com/donate/?business=B6GXXULAEPFF2&no_recurring=0&currency_code=USD"
-            >ディランへの寄付</a
-          >
-          <a
-            class="dropdown-item"
-            href="https://tools.tastethecode.com/youtube-latest/r/raydillanv"
-            >最新の動画</a
-          >
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="https://github.com/raydillanv"
-            >ディランのGitHub</a
-          >
-        </div>
-      </li>
-    </ul>
-  </div>
+<nav class="navbar fixed-top navbar-expand-lg navbar-light justify-content-center">
+  <div id="NavContainer"></div>
+  <script src="js/header.js"></script>
 </nav>
 
 
@@ -133,9 +72,9 @@
         <div class="row">
           <div class="col-12">
             <h1 class="main-title">ビクトリーのその他</h1>
-            <p>コンピュータサイエンス専攻、副専攻は日本語です。</p>
+            <p>主専攻:アジア研究、副専攻: 日本語と計算機科学</p>
             <p><a class="mainButton"
-                href="https://www.linkedin.com/in/dillanvictory/"
+                href="https://www.linkedin.com/in/dillanvictory/?locale=ja_JP"
                 role="button">リンクトイン »</a></p>
           </div>
         </div>
@@ -149,92 +88,12 @@
           <div id="other" class="section">
             <h1>その他</h1>
             <div class="text-container">
-              <p>テネシー州ナッシュビル、郵便番号 37212 | 電話番号: +1 (615) 542-6709 | メールアドレス: dillanrvictory@gmail.com</p>
-              <ul>
-                <li>
-                  <div class="social-media-links" style="margin-bottom: 10px">
-                    <a
-                      href="https://www.instagram.com/raydillanv/"
-                      target="_blank"
-                      style="margin-right: 2px; display: inline-block; width: 5%"
-                    >
-                      <img
-                        src="images/tBxa1IFcTQH.png"
-                        alt="Instagram"
-                        style="width: 100%; height: auto; max-width: 40px"
-                      />
-                    </a>
-                    <a
-                      href="https://discord.gg/dDMxsRqN7Z"
-                      target="_blank"
-                      style="margin-right: 2px; display: inline-block; width: 5%"
-                    >
-                      <img
-                        src="images/icon_clyde_blurple_RGB.png"
-                        alt="Instagram"
-                        style="width: 100%; height: auto; max-width: 40px"
-                      />
-                    </a>
-            
-                    <a
-                      href="https://www.linkedin.com/in/dillanvictory/"
-                      target="_blank"
-                      style="margin-right: 2px; display: inline-block; width: 5%"
-                    >
-                      <img
-                        src="images/LinkedIn_icon_circle.svg.png"
-                        alt="LinkedIn"
-                        style="width: 100%; height: auto; max-width: 40px"
-                      />
-                    </a>
-                    <a
-                      href="https://www.youtube.com/channel/UCZcnbssSYX67ztziXTp-oqQ"
-                      target="_blank"
-                      style="margin-right: 2px; display: inline-block; width: 5%"
-                    >
-                      <img
-                        src="images/free-youtube-logo-icon-2431-thumb.png"
-                        alt="YouTube"
-                        style="width: 100%; height: auto; max-width: 40px"
-                      />
-                    </a>
-                    <a
-                      href="https://github.com/raydillanv"
-                      target="_blank"
-                      style="margin-right: 2px; display: inline-block; width: 5%"
-                    >
-                      <img
-                        src="images/25231.png"
-                        alt="GitHub"
-                        style="width: 100%; height: auto; max-width: 40px"
-                      />
-                    </a>
-                    <a
-                      href="https://twitter.com/DillanVictory"
-                      target="_blank"
-                      style="margin-right: 2px; display: inline-block; width: 5%"
-                    >
-                      <img
-                        src="images/X-logo-transparent-black-twitter.png"
-                        alt="Instagram"
-                        style="width: 100%; height: auto; max-width: 40px"
-                      />
-                    </a>
-                    <a
-                      href="https://www.paypal.com/donate/?business=B6GXXULAEPFF2&no_recurring=0&currency_code=USD"
-                      target="_blank"
-                      style="margin-right: 2px; display: inline-block; width: 5%"
-                    >
-                      <img
-                        src="images/paypal.png"
-                        alt="GitHub"
-                        style="width: 100%; height: auto; max-width: 40px"
-                      />
-                    </a>
-                  </div>
-                </li>
-              </ul>
+              <p>テネシー州ナッシュビル、郵便番号 37212 | メールアドレス: dillanrvictory@gmail.com</p>
             </div>
+            <h1>雑多</h1>
+        <div class="text-container">
+          <p>効果: 雪</p>
+        </div>
           </div>
         </div>
 
@@ -267,7 +126,7 @@
         </a>
 
         <a
-          href="https://www.linkedin.com/in/dillanvictory/"
+          href="https://www.linkedin.com/in/dillanvictory/?locale=ja_JP"
           target="_blank"
           style="margin-right: 2px; display: inline-block; width: 5%"
         >
@@ -323,16 +182,20 @@
         </a>
       </div>
       <p class="copyright-footer">
-        Copyright &copy; 2024
-        <a href="mailto:dillanrvictory@gmail.com">Dillan Victory</a>. All rights
-        reserved.
+        著作権 &copy; 2025年
+        <a href="mailto:dillanrvictory@gmail.com">ビクトリー・レイ・ディラン</a>。全ての権利を保有。
       </p>
+      
     </footer>
+
+    <!-- Falling Emojis -->
+    <script src="js/emojiOther.js"></script>
 
     <!-- jQuery and Bootstrap JS -->
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/popper.min.js"></script>
-    <script src=js/bootstrap-4.4.1.js></script>
+
+    <script src="js/bootstrap-4.4.1.js"></script>
     <script>
       // Function to change the icon images in dark mode
       function updateIconsForDarkMode() {

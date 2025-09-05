@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="jp">
   <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
@@ -16,114 +16,56 @@
     <style>
 
       #about {
-        background-image: url("images/clingmans-dome-at-sunset-great-smoky-mountains-wallpaper-eb266c0db3412f9935e4eb09dd8c7ca0.jpg");
+        background: linear-gradient(to bottom right, #fa4de8, #4a6df9, #e9304f);
         border-radius: 20px; /* Adds rounded corners to the element */
         overflow: hidden; /* Ensures that the content does not overflow the rounded corners */
       }
 
       #education {
-        background-image: url("images/header-faculty-staff.jpg");
+        background: linear-gradient(to bottom right, #6358de, #4daac7, #af37c4);
+        border-radius: 20px; /* Adds rounded corners to the element */
+        overflow: hidden; /* Ensures that the content does not overflow the rounded corners */
       }
 
       #work {
-        background-image: url("images/work.jpeg");
+        background: linear-gradient(to bottom right, #58de5c, #c7904d, #c43737);
+        border-radius: 20px; /* Adds rounded corners to the element */
+        overflow: hidden; /* Ensures that the content does not overflow the rounded corners */
       }
 
       #projects {
-        background-image: url("images/fukuoka-fukuoka-tower-sunset-tower-antenna-japan-463815eefbe3045ea27586028f0e085a.jpg");
+        background: linear-gradient(to bottom right, #de5858, #6d4dc7, #37acc4);
+        border-radius: 20px; /* Adds rounded corners to the element */
+        overflow: hidden; /* Ensures that the content does not overflow the rounded corners */
       }
 
       #language {
-        background-image: url("https://www.esl-languages.com/sites/default/files/city/gallery/esl-fukuoka-language-stay-hero.jpg");
+        background: linear-gradient(to bottom right, #dea058, #c74d74, #37acc4);
+        border-radius: 20px; /* Adds rounded corners to the element */
+        overflow: hidden; /* Ensures that the content does not overflow the rounded corners */
       }
 
       #other {
-        background-image: url("https://www.visittheusa.com/sites/default/files/styles/hero_l/public/images/hero_media_image/2023-07/2e82bbc2-3c5f-4e51-9e64-a3ebedbd559d.jpeg?h=de10ecfe&itok=s18DYClQ");
+        background: linear-gradient(to bottom right, #b1de58, #4dc78e, #37acc4);
+        border-radius: 20px; /* Adds rounded corners to the element */
+        overflow: hidden; /* Ensures that the content does not overflow the rounded corners */
+      }
+      .largeImage {
+        display: none;
+        margin-top: 10px;
+        max-width: 100%;
+      }
+      .loadButton {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        margin: 5px;
       }
     </style>
 
-<nav class="navbar fixed-top navbar-expand-lg navbar-light">
-  <button
-    class="navbar-toggler"
-    type="button"
-    data-toggle="collapse"
-    data-target="#navbarSupportedContent1"
-    aria-controls="navbarSupportedContent1"
-    aria-expanded="false"
-    aria-label="Toggle navigation"
-  >
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div
-    class="collapse navbar-collapse text-dark bg-transparent justify-content-center"
-    id="navbarSupportedContent1"
-  >
-    <ul class="navbar-nav mx-auto">
-      <li class="nav-item active">
-        <a class="nav-link text-dark" href="index.html">
-          <img
-            src="apple-icon.png"
-            alt="Home"
-            style="height: 20px; width: auto; margin-right: 5px"
-          />
-          ホーム
-          <span class="sr-only"></span>
-        </a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link text-dark" href="education.html">教育</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-dark" href="work.html">職務経歴</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-dark" href="projects.html">プロジェクト</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-dark" href="language.html"
-          >言語学習</a
-        >
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-dark" href="other.html">その他</a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-item"> <a class="nav-link text-dark" href="../projects.html">English Version</a>
-      </li>
-
-      <li class="nav-item dropdown">
-        <a
-          class="nav-link dropdown-toggle text-dark"
-          href="#"
-          id="navbarDropdown1"
-          role="button"
-          data-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false"
-        >
-        ドロップダウン
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
-          <a
-            class="dropdown-item"
-            href="https://www.paypal.com/donate/?business=B6GXXULAEPFF2&no_recurring=0&currency_code=USD"
-            >ディランへの寄付</a
-          >
-          <a
-            class="dropdown-item"
-            href="https://tools.tastethecode.com/youtube-latest/r/raydillanv"
-            >最新の動画</a
-          >
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="https://github.com/raydillanv"
-            >ディランのGitHub</a
-          >
-        </div>
-      </li>
-    </ul>
-  </div>
+<nav class="navbar fixed-top navbar-expand-lg navbar-light justify-content-center">
+  <div id="NavContainer"></div>
+  <script src="js/header.js"></script>
 </nav>
 
 
@@ -134,9 +76,9 @@
         <div class="row">
           <div class="col-12">
             <h1 class="main-title">ビクトリーのプロジェクト</h1>
-            <p>コンピュータサイエンス専攻、副専攻は日本語です。</p>
+            <p>主専攻:アジア研究、副専攻: 日本語と計算機科学</p>
             <p><a class="mainButton"
-                href="https://www.linkedin.com/in/dillanvictory/"
+                href="https://www.linkedin.com/in/dillanvictory/?locale=ja_JP"
                 role="button">リンクトイン »</a></p>
           </div>
         </div>
@@ -158,6 +100,39 @@
                   href="https://github.com/raydillanv/"
                   role="button">ギットハブ »
               </a>
+            </div>
+            <h1>コードネーム: Project Jagir</h1>
+            <div class="text-container">
+              <p>Unreal Engine 5で制作されたホラーとRPG要素を組み合わせたゲームです。</p>
+              <p style="text-indent: 50px;">現在も開発が進行中のため、すべての内容は変更される可能性があります。</p>
+    
+              <p>先行公開:</p>
+              <p style="text-indent: 50px;"><em>(画像は高解像度2560 x 1440です。リソースを節約するため、必要に応じて画像を読み込んでください。)</em></p>
+              
+              <ul>
+                <li>
+                  <button class="mainButton loadButton" data-src="images/demoImages/road.png">画像を読み込む: 1</button>
+                  <img class="largeImage" alt="Large Image 1" />
+                </li>
+                <li>
+                  <button class="mainButton loadButton" data-src="images/demoImages/corner.png">画像を読み込む: 2</button>
+                  <img class="largeImage" alt="Large Image 2" />
+                </li>
+                <li>
+                  <button class="mainButton loadButton" data-src="images/demoImages/otherSide.png">画像を読み込む: 3</button>
+                  <img class="largeImage" alt="Large Image 3" />
+                </li>
+                <li>
+                  <button class="mainButton loadButton" data-src="images/demoImages/sky.png">画像を読み込む: 4</button>
+                  <img class="largeImage" alt="Large Image 4" />
+                </li>
+              </ul>
+              <p class="copyright-footer">
+                特に明記されていない限り、プロジェクトに関する画像や資料は著作権で保護されています。著作権 &copy; 2024年
+                <a href="mailto:dillanrvictory@gmail.com">ビクトリー・レイ・ディラン</a>。全ての権利を保有。
+              </p>
+    
+              
             </div>
           </div>
         </div>
@@ -191,7 +166,7 @@
         </a>
 
         <a
-          href="https://www.linkedin.com/in/dillanvictory/"
+          href="https://www.linkedin.com/in/dillanvictory/?locale=ja_JP"
           target="_blank"
           style="margin-right: 2px; display: inline-block; width: 5%"
         >
@@ -247,11 +222,33 @@
         </a>
       </div>
       <p class="copyright-footer">
-        Copyright &copy; 2024
-        <a href="mailto:dillanrvictory@gmail.com">Dillan Victory</a>. All rights
-        reserved.
+        著作権 &copy; 2025年
+        <a href="mailto:dillanrvictory@gmail.com">ビクトリー・レイ・ディラン</a>。全ての権利を保有。
       </p>
+      
     </footer>
+    <!-- Load Images -->
+    <script>
+      const buttons = document.querySelectorAll(".loadButton");
+  
+      buttons.forEach(button => {
+        button.addEventListener("click", function() {
+          const img = this.nextElementSibling; // Get the next img element
+          const imageSource = this.getAttribute("data-src");
+          let isLoaded = img.style.display === "block"; // Check if image is currently loaded
+  
+          if (isLoaded) {
+            img.style.display = "none"; // Hide the image
+            img.src = ""; // Reset the src to unload the image
+            this.innerText = `画像を読み込む: ${this.textContent.slice(-1)}`; // Reset button text
+          } else {
+            img.src = imageSource; // Set the src from data attribute
+            img.style.display = "block"; // Show the image
+            this.innerText = `画像をオフにする: ${this.textContent.slice(-1)}`; // Change button text
+          }
+        });
+      });
+    </script>
 
     <!-- jQuery and Bootstrap JS -->
     <script src="js/jquery-3.4.1.min.js"></script>
