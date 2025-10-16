@@ -135,11 +135,16 @@ html {
 }
 
 .copyright-footer {
+  position: fixed;
+  text-align: center;
+  bottom: 0px;
+  width: 100%;
   border-top: 1px solid #cccccc; /* Thin light grey line */
   padding-top: 10px; /* Space above the text */
   margin-top: 10px; /* Space between the line and social media links */
   margin: 0;
   font-size: 0.9vw;
+  
 }
 
 .section {
