@@ -1,21 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="jp">
   <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <title>About Dillan Victory</title>
-    <link href="css/bootstrap.css" rel="stylesheet" />
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>ビクトリー</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" href="css/universalStyles.css">
-
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <!-- Additional icons and manifest for a coherent look across devices -->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/apple-icon-180x180.png"
-    />
-    <link rel="manifest" href="/manifest.json" />
-    <meta name="theme-color" content="#ffffff" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#ffffff">
   </head>
   <body style="padding-top: 70px">
     <style>
@@ -55,74 +50,94 @@
         border-radius: 20px; /* Adds rounded corners to the element */
         overflow: hidden; /* Ensures that the content does not overflow the rounded corners */
       }
+      .largeImage {
+        display: none;
+        margin-top: 10px;
+        max-width: 100%;
+      }
+      .loadButton {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        margin: 5px;
+      }
     </style>
 
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light justify-content-center">
-      <div id="NavContainer"></div>
-      <script src="js/header.js"></script>
-    </nav>
+<nav class="navbar fixed-top navbar-expand-lg navbar-light justify-content-center">
+  <div id="NavContainer"></div>
+  <script src="js/header.js"></script>
+</nav>
+
+
+
 
     <section class="text-center mt-2">
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <h1 class="main-title">Dillan Ray Victory.</h1>
-            <p>Asian Studies Major with a minor in Japanese and Computer Science.</p>
-            <p>
-              <a
-                class="mainButton"
-                href="https://www.linkedin.com/in/dillanvictory/"
-                role="button"
-                >My LinkedIn »</a
-              >
-            </p>
+            <h1 class="main-title">ビクトリーのプロジェクト</h1>
+            <p>主専攻:アジア研究、副専攻: 日本語と計算機科学</p>
+            <p><a class="mainButton"
+                href="https://www.linkedin.com/in/dillanvictory/?locale=ja_JP"
+                role="button">リンクトイン »</a></p>
           </div>
         </div>
       </div>
     </section>
 
+    <div class="container">
 
+      <body>
 
-    <div class="container" >
-      <div id="about" class="section">
-        <h1>Latest Work</h1>
-        <div class="text-container">
-          <p>Currently working on a small game in Unity.</p>
-          <p><a href= "https://store.steampowered.com/app/3422210/Santas_Shadow/"> Santa's Shadow</a>: Made in Unreal Engine 5.4.</p>
+        <div class="container">
+          <div id="projects" class="section">
+            <h1>プロジェクト</h1>
+            <div class="text-container">
+              <li>
+                最新のプロジェクトは私のギットハブページで確認できます。
+              </li>
+              <a class="mainButton"
+                  href="https://github.com/raydillanv/"
+                  role="button">ギットハブ »
+              </a>
+            </div>
+            <h1>コードネーム: Project Jagir</h1>
+            <div class="text-container">
+              <p>Unreal Engine 5で制作されたホラーとRPG要素を組み合わせたゲームです。</p>
+              <p style="text-indent: 50px;">現在も開発が進行中のため、すべての内容は変更される可能性があります。</p>
+    
+              <p>先行公開:</p>
+              <p style="text-indent: 50px;"><em>(画像は高解像度2560 x 1440です。リソースを節約するため、必要に応じて画像を読み込んでください。)</em></p>
+              
+              <ul>
+                <li>
+                  <button class="mainButton loadButton" data-src="images/demoImages/road.png">画像を読み込む: 1</button>
+                  <img class="largeImage" alt="Large Image 1" />
+                </li>
+                <li>
+                  <button class="mainButton loadButton" data-src="images/demoImages/corner.png">画像を読み込む: 2</button>
+                  <img class="largeImage" alt="Large Image 2" />
+                </li>
+                <li>
+                  <button class="mainButton loadButton" data-src="images/demoImages/otherSide.png">画像を読み込む: 3</button>
+                  <img class="largeImage" alt="Large Image 3" />
+                </li>
+                <li>
+                  <button class="mainButton loadButton" data-src="images/demoImages/sky.png">画像を読み込む: 4</button>
+                  <img class="largeImage" alt="Large Image 4" />
+                </li>
+              </ul>
+              <p class="copyright-footer">
+                特に明記されていない限り、プロジェクトに関する画像や資料は著作権で保護されています。著作権 &copy; 2024年
+                <a href="mailto:dillanrvictory@gmail.com">ビクトリー・レイ・ディラン</a>。全ての権利を保有。
+              </p>
+    
+              
+            </div>
+          </div>
         </div>
-        <h1>About Me</h1>
-        <div class="text-container">
-          <p>Nashville TN 37212 | dillanrvictory@gmail.com</p>
-          <ul>
-            <li>
-              I am currently in undergrad at Belmont University; I major in Asian studies and minor in Computer Science and Japanese.
-            </li>
-            <li>
-              I continue to persevere in the Belmont Global Honors program despite heavy course loads and working throughout my enrollment.
-            </li>
-            <li>
-              During my freshman year I was a founding member of the Belmont University Data, Mathematics, and Computing Association (DMCA). Where I managed the social media and helped plan events for the 22-23 academic year.
-            </li>
-            <li>
-              In this time I have worked with Java, Python, C, C++, C#, Haskell, HTML, CSS, JavaScript, TypeScript, and will continue to learn more languages as I progress through my degree.
-            </li>
-            <li>
-              During my sophomore year I have been abroad in Japan and Scotland.
-            </li>
-            <li>
-               In Japan I explored my love for language learning, learned many new things about asian cultures, and completely changed my perspective on the world. 
-            </li>
-            <li>
-              In Scotland I explored my passion for computer science and the creative process of software development. I specialised in AI algorithms, Mobile App Development, Web Development, and Functional programming.
-            </li>
-            <li>
-              In the fall of 2024 I will be heading into my junior year at Belmont University. 
-            </li>
-          </ul>
 
-          
-        </div>
-      </div>
+      </body>
     </div>
 
     <footer style="text-align: center; padding: 10px">
@@ -151,7 +166,7 @@
         </a>
 
         <a
-          href="https://www.linkedin.com/in/dillanvictory/"
+          href="https://www.linkedin.com/in/dillanvictory/?locale=ja_JP"
           target="_blank"
           style="margin-right: 2px; display: inline-block; width: 5%"
         >
@@ -207,17 +222,38 @@
         </a>
       </div>
       <p class="copyright-footer">
-        Copyright &copy; 2025
-        <a href="mailto:dillanrvictory@gmail.com">Dillan Victory</a>. All rights
-        reserved.
+        著作権 &copy; 2025年
+        <a href="mailto:dillanrvictory@gmail.com">ビクトリー・レイ・ディラン</a>。全ての権利を保有。
       </p>
+      
     </footer>
+    <!-- Load Images -->
+    <script>
+      const buttons = document.querySelectorAll(".loadButton");
+  
+      buttons.forEach(button => {
+        button.addEventListener("click", function() {
+          const img = this.nextElementSibling; // Get the next img element
+          const imageSource = this.getAttribute("data-src");
+          let isLoaded = img.style.display === "block"; // Check if image is currently loaded
+  
+          if (isLoaded) {
+            img.style.display = "none"; // Hide the image
+            img.src = ""; // Reset the src to unload the image
+            this.innerText = `画像を読み込む: ${this.textContent.slice(-1)}`; // Reset button text
+          } else {
+            img.src = imageSource; // Set the src from data attribute
+            img.style.display = "block"; // Show the image
+            this.innerText = `画像をオフにする: ${this.textContent.slice(-1)}`; // Change button text
+          }
+        });
+      });
+    </script>
 
     <!-- jQuery and Bootstrap JS -->
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/popper.min.js"></script>
-
-    <script src="js/bootstrap-4.4.1.js"></script>
+    <script src=js/bootstrap-4.4.1.js></script>
     <script>
       // Function to change the icon images in dark mode
       function updateIconsForDarkMode() {
