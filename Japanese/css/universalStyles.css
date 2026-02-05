@@ -139,7 +139,7 @@ html {
   padding-top: 10px; /* Space above the text */
   margin-top: 10px; /* Space between the line and social media links */
   margin: 0;
-  font-size: clamp(10px, 0.9vw, 14px);
+  font-size: 0.9vw;
 }
 
 .section {
