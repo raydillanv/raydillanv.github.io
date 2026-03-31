@@ -253,6 +253,12 @@ html {
         will-change: transform;
       }
 
+      @media (prefers-color-scheme: light) {
+        .marquee-row {
+        color: rgba(0, 0, 0, 0.25);
+        }
+      }
+
       /* Dark mode: slightly darker overlay, dimmer text */
       @media (prefers-color-scheme: dark) {
         #bg-marquee::after {
