@@ -223,3 +223,61 @@ html {
   border-radius: 20px;
   overflow: hidden;
 }
+
+      /* Background marquee layer */
+      #bg-marquee {
+        position: fixed;
+        inset: 0;
+        z-index: 0;
+        overflow: hidden;
+        pointer-events: none;
+      }
+
+      /* Grey overlay sits on top of the text stripes */
+      #bg-marquee::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: rgba(128, 128, 128, 0.70);
+        z-index: 1;
+      }
+
+      .marquee-row {
+        position: absolute;
+        white-space: nowrap;
+        font-size: 2.2rem;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+        color: rgba(255, 255, 255, 0.55);
+        user-select: none;
+        will-change: transform;
+      }
+
+      /* Dark mode: slightly darker overlay, dimmer text */
+      @media (prefers-color-scheme: dark) {
+        #bg-marquee::after {
+          background: rgba(10, 10, 10, 0.72);
+        }
+        .marquee-row {
+          color: rgba(255, 255, 255, 0.25);
+        }
+      }
+
+      @keyframes marquee-ltr {
+        from { transform: translateX(-50%); }
+        to   { transform: translateX(0%); }
+      }
+
+      @keyframes marquee-rtl {
+        from { transform: translateX(0%); }
+        to   { transform: translateX(-50%); }
+      }
+
+      .marquee-ltr { animation: marquee-ltr linear infinite; }
+      .marquee-rtl { animation: marquee-rtl linear infinite; }
+
+      /* Everything else needs to sit above the marquee layer */
+      nav, section, .container, footer {
+        position: relative;
+        z-index: 2;
+      }

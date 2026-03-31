@@ -12,65 +12,6 @@
     <link rel="manifest" href="/manifest.json" />
     <meta name="theme-color" content="#ffffff" />
 
-    <style>
-      /* Background marquee layer */
-      #bg-marquee {
-        position: fixed;
-        inset: 0;
-        z-index: 0;
-        overflow: hidden;
-        pointer-events: none;
-      }
-
-      /* Grey overlay sits on top of the text stripes */
-      #bg-marquee::after {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background: rgba(128, 128, 128, 0.70);
-        z-index: 1;
-      }
-
-      .marquee-row {
-        position: absolute;
-        white-space: nowrap;
-        font-size: 2.2rem;
-        font-weight: 700;
-        letter-spacing: 0.15em;
-        color: rgba(255, 255, 255, 0.55);
-        user-select: none;
-        will-change: transform;
-      }
-
-      /* Dark mode: slightly darker overlay, dimmer text */
-      @media (prefers-color-scheme: dark) {
-        #bg-marquee::after {
-          background: rgba(10, 10, 10, 0.72);
-        }
-        .marquee-row {
-          color: rgba(255, 255, 255, 0.25);
-        }
-      }
-
-      @keyframes marquee-ltr {
-        from { transform: translateX(-50%); }
-        to   { transform: translateX(0%); }
-      }
-
-      @keyframes marquee-rtl {
-        from { transform: translateX(0%); }
-        to   { transform: translateX(-50%); }
-      }
-
-      .marquee-ltr { animation: marquee-ltr linear infinite; }
-      .marquee-rtl { animation: marquee-rtl linear infinite; }
-
-      /* Everything else needs to sit above the marquee layer */
-      nav, section, .container, footer {
-        position: relative;
-        z-index: 2;
-      }
-    </style>
   </head>
   <body style="padding-top: 70px">
 
@@ -95,151 +36,113 @@
     </section>
 
     <div class="container" >
-      <div id="about" class="section">
+      <div id="about" class="section" style="text-align: center">
         <h1>Latest Work</h1>
         <div class="text-container">
-          <p>Currently working on a small game in Unity.</p>
-          <p><a href= "https://store.steampowered.com/app/3422210/Santas_Shadow/"> Santa's Shadow</a>: Made in Unreal Engine 5.4.</p>
+          <p>Minus AI Appender : Released March 31st, 2026 - Google Chrome Extension for appending '-ai' to the end of search queries.</p>
+          <p><a href= "https://chromewebstore.google.com/detail/pdkkcmpljnmidhpghjblkkjmpmckdknp?utm_source=item-share-cb/">Chrome Web Store</a></p>
         </div>
         <h1>About Me</h1>
-        <div class="text-container">
-          <p>Nashville TN 37212 | dillanrvictory@gmail.com</p>
-          <ul>
-            <li>
-              I am currently in undergrad at Belmont University; I major in Asian studies and minor in Computer Science and Japanese.
-            </li>
-            <li>
-              I continue to persevere in the Belmont Global Honors program despite heavy course loads and working throughout my enrollment.
-            </li>
-            <li>
-              During my freshman year I was a founding member of the Belmont University Data, Mathematics, and Computing Association (DMCA). Where I managed the social media and helped plan events for the 22-23 academic year.
-            </li>
-            <li>
-              In this time I have worked with Java, Python, C, C++, C#, Haskell, HTML, CSS, JavaScript, TypeScript, and will continue to learn more languages as I progress through my degree.
-            </li>
-            <li>
-              During my sophomore year I have been abroad in Japan and Scotland.
-            </li>
-            <li>
-               In Japan I explored my love for language learning, learned many new things about asian cultures, and completely changed my perspective on the world. 
-            </li>
-            <li>
-              In Scotland I explored my passion for computer science and the creative process of software development. I specialised in AI algorithms, Mobile App Development, Web Development, and Functional programming.
-            </li>
-            <li>
-              In the fall of 2024 I will be heading into my junior year at Belmont University. 
-            </li>
-          </ul>
+        <div class="text-container" style="text-align: center">
+          <p>My name is Dillan Victory and I am currently in undergrad at Belmont University; I major in Asian studies and double minor in Computer Science and Japanese. In April of 2025, I published a research paper
+          titled <i>"The Economic and Environmental Impact of Shinkansen and High-Speed Rail Infrastructure: A Comparative Analysis of Economic Growth and Carbon Emissions Reduction"</i>. 
+          While this topic is still on my mind, 
+          in the past year and a half I have become very interested in game development, working with Unity and Unreal Engine, to release two games on Steam. 
+          In addition, the programming languages I have worked with include: Java, Python, C, C++, C#, Haskell, HTML, CSS, JavaScript, 
+          and TypeScript. I also have a passion for learning languages, and have studied French (Intermediate) and Japanese (Advanced). In the future I hope to combine all three of my fields, Asian studies, computer science, and Japanese. Lastly, 
+          I am always open to new opportunities, so if you have any questions or would like to get in touch, please feel free to contact me.
+          </p>
         </div>
       </div>
     </div>
 
     <div class="container">
-      <div id="projects" class="section">
-        <h1>Office 5</h1>
+      <div id="projects" class="section" style="text-align: center">
+        <h1>Research</h1>
         <div class="text-container">
+          <a class="mainButton" href="https://repository.belmont.edu/spark_presentations/219/" role="button">Belmont Repository »</a>
           <ul>
-            <li>
-              <h4>Summary</h4>
-              <p>Protect your family. Protect your coworkers. Verify today. Office 5 is an analog indie horror experience where the player can never be certain who is human or who is unverified. </p>
-              <a class="mainButton" href="https://store.steampowered.com/app/3887040/Office_5/" role="button">Office 5 »</a>
-            </li>
-            <li>
-              <h4>The Retroactive Fulfillment Corporation (The R.F.C.) exists in a world where Doppelgängers and unverified people plague society.</h4>
-              <p>You are Riku Moriyama, a recent transfer from Office 3, who is starting his first day on the job at Office 5. Office 5 has recently secured its biggest client to date and has become inundated with transfers, new faces, and daily requirements for verification. </p>
-            </li>
-            <li>
-              <h4>Verification</h4>
-              <ul>
-                <li>The R.F.C. now recommends daily verification for all its employees.</li>
-                <li>"Protect your family. Protect your coworkers. Verify today."</li>
-                <li>"A verified employee is a safe employee."</li>
-              </ul>
-              <p>Without verification there is no guarantee an employee will be granted access to any R.F.C. facilities. The admittance of unverified people endangers your coworkers, and most importantly, delays fulfillment of client requests. </p>
-            </li>
-            <li>
-              <h4>Office 5 Information</h4>
-              <ul>
-                <li>Office 5 is one of 32 branches of offices maintained by the R.F.C.</li>
-                <li>A new client recently chose Office 5 to be responsible for all of its requests.</li>
-                <li>In order to ensure consistent fulfillment, new employees and transfers must report to the Office 5 Verification Center. </li>
-              </ul>
-              <p>The top priority of Office 5 is to ensure the continuation of client request fulfillment, regardless of an employees circumstance. </p>
-            </li>
-            <li>
-              <h4>The Unverified Person Discrepancy Alarm (U.P.D.A.)</h4>
-              <p>In the unlikely event security detects the presence of an unverified person, the "U.P.D.A" will inform employees. Employees will be trained to escape to a safe place until help arrives. </p>
-            </li>
-            <li>
-              <h4>Key Features</h4>
-              <ul>
-                <li>Environment Interactions: Riku can interact with a variety of signs, items and NPCs to progress the story. </li>
-                <li>Hiding: Get away from the enemy by utilizing your surroundings. </li>
-              </ul>
-            </li>
+              <h4><i>"The Economic and Environmental Impact of Shinkansen and High-Speed Rail Infrastructure: A Comparative Analysis of Economic Growth and Carbon Emissions Reduction"</i>.</h4>
+              <p>A research project analyzing the economic and environmental impacts of high-speed rail infrastructure.</p>
           </ul>
+          
         </div>
-        <h1>Previous Projects</h1>
+        <h1>Steam Games</h1>
         <div class="text-container">
+          <a class="mainButton" href="https://store.steampowered.com/app/3887040/Office_5/" role="button">Office 5 »</a>
           <ul>
-            <li>
-              <h4>Summary</h4>
-              <p>Santa's Shadow is an indie horror experience that pits the player against a crazed family member. The goal is to escape by any means nescessary.</p>
-              <a class="mainButton" href="https://store.steampowered.com/app/3422210/Santas_Shadow/" role="button">Santa's Shadow »</a>
-            </li>
+              
+              <p>Office 5 is an analog indie horror experience where the player can never be certain who is human or who is unverified.</p>
           </ul>
+           <a class="mainButton" href="https://store.steampowered.com/app/3422210/Santas_Shadow/" role="button">Santa's Shadow »</a>            
+          <ul>
+              
+              <p>Santa's Shadow is an indie horror experience that pits the player against a crazed family member. The goal is to escape by any means nescessary.</p>
+          </ul>
+         
+        </div>
+        <h1>Other Work</h1>
+        <div class="text-container">
+          <a class="mainButton" href="https://chromewebstore.google.com/detail/pdkkcmpljnmidhpghjblkkjmpmckdknp?utm_source=item-share-cb/" role="button">Minus AI Appender »</a>
+          <ul>
+              
+              <p>Appends '-ai' to every search query on 50+ search engines</p>
+          </ul>
+          
         </div>
         <h1>My Repositories</h1>
+
         <div class="text-container">
+          <a class="mainButton" href="https://github.com/raydillanv/" role="button">Github »</a>
           <ul>
-            <li>More information on things I have worked on can be found on my GitHub.</li>
+            <p>More information on things I have worked on can be found on my GitHub.</p>
           </ul>
-          <a class="mainButton" href="https://github.com/raydillanv/" role="button">My Github »</a>
+          
         </div>
       </div>
     </div>
 
     <div class="container">
-      <div id="Resume" class="section">
+      <div id="Resume" class="section" style="text-align: center">
         <h1>Education</h1>
         <div class="text-container">
-            <p>Nashville TN 37212 | dillanrvictory@gmail.com</p>
             <ul>
-              <li>Belmont University, Nashville TN, Full-time - Aug 2022 - Present</li>
-              <li>University of Strathclyde, Glasgow Scotland, Full-time - Jan 2024 - Jun 2024</li>
-              <li>Seinan Gakuin University, Fukuoka Japan, Full-time - Aug 2023 - Dec 2023</li>
+              <p>Belmont University, Nashville TN, Full-time - Aug 2022 - Present</p>
+              <p>University of Strathclyde, Glasgow Scotland, Full-time - Jan 2024 - Jun 2024</p>
+              <p>Seinan Gakuin University, Fukuoka Japan, Full-time - Aug 2023 - Dec 2023</p>
             </ul>
         </div>
         <h1>Work History</h1>
         <div class="text-container">
-          <p>Nashville TN 37212 | dillanrvictory@gmail.com</p>
           <ul>
-            <li>Walgreens, Nashville TN, Full-time - Aug 2022 - Aug 2023</li>
-            <li>Walgreens, Manchester TN, Full-time - May 2023 - Aug 2023</li>
-            <li>Walgreens, Murfreesburo TN, Part-time - Intermitently 2021 - 2023</li>
-            <li>Walgreens, Tullahoma TN, Full-time - Aug 2021 - Aug 2023</li>
-            <li>Walmart, Shelbyville TN, Full-time - Apr 2021 - Aug 2021</li>
+            <p>Resident Assistant at Belmont University. Nashville TN, Full-time - Aug 2025 - Present</p>
+            <p>Japanese Tutor at Belmont University. Nashville TN, Part-time - Jan 2025 - Dec 2025</p>
+            <p>Walgreens. Nashville TN, Full-time - Aug 2024 - October 2024</p>
+            <p>Walgreens. Nashville TN, Full-time - Aug 2022 - Aug 2023</p>
+            <p>Walgreens. Manchester TN, Full-time - May 2023 - Aug 2023</p>
+            <p>Walgreens. Murfreesburo TN, Part-time - Intermitently 2021 - 2023</p>
+            <p>Walgreens. Tullahoma TN, Full-time - Aug 2021 - Aug 2023</p>
+            <p>Walmart. Shelbyville TN, Full-time - Apr 2021 - Aug 2021</p>
+
           </ul>
         </div>
         <h1>Language Study</h1>
         <div class="text-container">
-          <p>Nashville TN 37212 | dillanrvictory@gmail.com</p>
           <ul>
-            <li><b>French:</b> During freshman year of high school (2018), I began studying French, and continued for 4 years. Here is where my love for languages began.</li>
-            <li><b>Japanese:</b> Later in life, during my freshman year of university (2022), I began studying Japanese. I have been studying Japanese for 2 years now.</li>
-            <li><b>Italian:</b> I have had interactions with Italian since I was young; however, it was sophomore year of university that I began studying more formal Italian.</li>
+            <p><b>French:</b> Intermediate.</p>
+            <p><b>Japanese:</b> Advanced.</p>
           </ul>
         </div>
       </div>
     </div>
 
     <div class="container">
-      <div id="Contact" class="section">
+      <div id="Contact" class="section" style="text-align: center">
         <h1>Contact Information</h1>
         <div class="text-container">
             <p>Nashville TN 37212 | dillanrvictory@gmail.com</p>
             <ul>
-              <li>More contact details coming soon.</li>
+              <p>More contact details coming soon.</p>
             </ul>
             <p>Copyright &copy; 2026 <a href="mailto:dillanrvictory@gmail.com">Dillan Victory</a>. All rights reserved.</p>
 
