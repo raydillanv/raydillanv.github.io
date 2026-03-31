@@ -1,217 +1,330 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <title>About Dillan Victory</title>
-    <link href="css/bootstrap.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/universalStyles.css">
 
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <!-- Additional icons and manifest for a coherent look across devices -->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/apple-icon-180x180.png"
-    />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png" />
     <link rel="manifest" href="/manifest.json" />
     <meta name="theme-color" content="#ffffff" />
-  </head>
-  <body style="padding-top: 70px">
+
     <style>
-
-      #about {
-        background: linear-gradient(to bottom right, #fa4de8, #4a6df9, #e9304f);
-        border-radius: 20px; /* Adds rounded corners to the element */
-        overflow: hidden; /* Ensures that the content does not overflow the rounded corners */
+      /* Background marquee layer */
+      #bg-marquee {
+        position: fixed;
+        inset: 0;
+        z-index: 0;
+        overflow: hidden;
+        pointer-events: none;
       }
 
-      #education {
-        background: linear-gradient(to bottom right, #6358de, #4daac7, #af37c4);
-        border-radius: 20px; /* Adds rounded corners to the element */
-        overflow: hidden; /* Ensures that the content does not overflow the rounded corners */
+      /* Grey overlay sits on top of the text stripes */
+      #bg-marquee::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: rgba(128, 128, 128, 0.70);
+        z-index: 1;
       }
 
-      #work {
-        background: linear-gradient(to bottom right, #58de5c, #c7904d, #c43737);
-        border-radius: 20px; /* Adds rounded corners to the element */
-        overflow: hidden; /* Ensures that the content does not overflow the rounded corners */
+      .marquee-row {
+        position: absolute;
+        white-space: nowrap;
+        font-size: 2.2rem;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+        color: rgba(255, 255, 255, 0.55);
+        user-select: none;
+        will-change: transform;
       }
 
-      #projects {
-        background: linear-gradient(to bottom right, #de5858, #6d4dc7, #37acc4);
-        border-radius: 20px; /* Adds rounded corners to the element */
-        overflow: hidden; /* Ensures that the content does not overflow the rounded corners */
+      /* Dark mode: slightly darker overlay, dimmer text */
+      @media (prefers-color-scheme: dark) {
+        #bg-marquee::after {
+          background: rgba(10, 10, 10, 0.72);
+        }
+        .marquee-row {
+          color: rgba(255, 255, 255, 0.25);
+        }
       }
 
-      #language {
-        background: linear-gradient(to bottom right, #dea058, #c74d74, #37acc4);
-        border-radius: 20px; /* Adds rounded corners to the element */
-        overflow: hidden; /* Ensures that the content does not overflow the rounded corners */
+      @keyframes marquee-ltr {
+        from { transform: translateX(-50%); }
+        to   { transform: translateX(0%); }
       }
 
-      #other {
-        background: linear-gradient(to bottom right, #b1de58, #4dc78e, #37acc4);
-        border-radius: 20px; /* Adds rounded corners to the element */
-        overflow: hidden; /* Ensures that the content does not overflow the rounded corners */
+      @keyframes marquee-rtl {
+        from { transform: translateX(0%); }
+        to   { transform: translateX(-50%); }
+      }
+
+      .marquee-ltr { animation: marquee-ltr linear infinite; }
+      .marquee-rtl { animation: marquee-rtl linear infinite; }
+
+      /* Everything else needs to sit above the marquee layer */
+      nav, section, .container, footer {
+        position: relative;
+        z-index: 2;
       }
     </style>
+  </head>
+  <body style="padding-top: 70px">
 
+    <!-- Persistent background marquee -->
+    <div id="bg-marquee" aria-hidden="true"></div>
 
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light justify-content-center">
+      <div id="NavContainer"></div>
+      <script src="js/header.js"></script>
+    </nav>
 
     <section class="text-center mt-2">
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <h1 class="main-title">Sorry. This content is not currently available.</h1>
-            <p>This portion of the site is currently being resurfaced for 2026. Please check back soon.</p>
-            <p>
-              <a
-                class="mainButton"
-                href="https://www.linkedin.com/in/dillanvictory/"
-                role="button"
-                >My LinkedIn »</a
-              >
-            </p>
+            <h1 class="main-title">Dillan Ray Victory.</h1>
+            <p>Asian Studies Major with a minor in Japanese and Computer Science.</p>
+
           </div>
         </div>
       </div>
     </section>
 
-            <section class="text-center mt-2">
-      <div class="container">
-
-            <a href="Japanese/index.html">日本語はこちらをクリック</a>
-
-
+    <div class="container" >
+      <div id="about" class="section">
+        <h1>Latest Work</h1>
+        <div class="text-container">
+          <p>Currently working on a small game in Unity.</p>
+          <p><a href= "https://store.steampowered.com/app/3422210/Santas_Shadow/"> Santa's Shadow</a>: Made in Unreal Engine 5.4.</p>
+        </div>
+        <h1>About Me</h1>
+        <div class="text-container">
+          <p>Nashville TN 37212 | dillanrvictory@gmail.com</p>
+          <ul>
+            <li>
+              I am currently in undergrad at Belmont University; I major in Asian studies and minor in Computer Science and Japanese.
+            </li>
+            <li>
+              I continue to persevere in the Belmont Global Honors program despite heavy course loads and working throughout my enrollment.
+            </li>
+            <li>
+              During my freshman year I was a founding member of the Belmont University Data, Mathematics, and Computing Association (DMCA). Where I managed the social media and helped plan events for the 22-23 academic year.
+            </li>
+            <li>
+              In this time I have worked with Java, Python, C, C++, C#, Haskell, HTML, CSS, JavaScript, TypeScript, and will continue to learn more languages as I progress through my degree.
+            </li>
+            <li>
+              During my sophomore year I have been abroad in Japan and Scotland.
+            </li>
+            <li>
+               In Japan I explored my love for language learning, learned many new things about asian cultures, and completely changed my perspective on the world. 
+            </li>
+            <li>
+              In Scotland I explored my passion for computer science and the creative process of software development. I specialised in AI algorithms, Mobile App Development, Web Development, and Functional programming.
+            </li>
+            <li>
+              In the fall of 2024 I will be heading into my junior year at Belmont University. 
+            </li>
+          </ul>
+        </div>
       </div>
-    </section>
+    </div>
 
-    <footer style="text-align: center; padding: 10px">
-      <div class="social-media-links" style="margin-bottom: 10px">
-        <a
-          href="https://www.instagram.com/raydillanv/"
-          target="_blank"
-          style="margin-right: 2px; display: inline-block; width: 5%"
-        >
-          <img
-            src="images/tBxa1IFcTQH.png"
-            alt="Instagram"
-            style="width: 100%; height: auto; max-width: 40px"
-          />
-        </a>
-        <a
-          href="https://discord.gg/dDMxsRqN7Z"
-          target="_blank"
-          style="margin-right: 2px; display: inline-block; width: 5%"
-        >
-          <img
-            src="images/icon_clyde_blurple_RGB.png"
-            alt="Instagram"
-            style="width: 100%; height: auto; max-width: 40px"
-          />
-        </a>
-
-        <a
-          href="https://www.linkedin.com/in/dillanvictory/"
-          target="_blank"
-          style="margin-right: 2px; display: inline-block; width: 5%"
-        >
-          <img
-            src="images/LinkedIn_icon_circle.svg.png"
-            alt="LinkedIn"
-            style="width: 100%; height: auto; max-width: 40px"
-          />
-        </a>
-        <a
-          href="https://www.youtube.com/channel/UCZcnbssSYX67ztziXTp-oqQ"
-          target="_blank"
-          style="margin-right: 2px; display: inline-block; width: 5%"
-        >
-          <img
-            src="images/free-youtube-logo-icon-2431-thumb.png"
-            alt="YouTube"
-            style="width: 100%; height: auto; max-width: 40px"
-          />
-        </a>
-        <a
-          href="https://github.com/raydillanv"
-          target="_blank"
-          style="margin-right: 2px; display: inline-block; width: 5%"
-        >
-          <img
-            src="images/25231.png"
-            alt="GitHub"
-            style="width: 100%; height: auto; max-width: 40px"
-          />
-        </a>
-        <a
-          href="https://twitter.com/DillanVictory"
-          target="_blank"
-          style="margin-right: 2px; display: inline-block; width: 5%"
-        >
-          <img
-            src="images/X-logo-transparent-black-twitter.png"
-            alt="Instagram"
-            style="width: 100%; height: auto; max-width: 40px"
-          />
-        </a>
-        <a
-          href="https://www.paypal.com/donate/?business=B6GXXULAEPFF2&no_recurring=0&currency_code=USD"
-          target="_blank"
-          style="margin-right: 2px; display: inline-block; width: 5%"
-        >
-          <img
-            src="images/paypal.png"
-            alt="GitHub"
-            style="width: 100%; height: auto; max-width: 40px"
-          />
-        </a>
+    <div class="container">
+      <div id="projects" class="section">
+        <h1>Office 5</h1>
+        <div class="text-container">
+          <ul>
+            <li>
+              <h4>Summary</h4>
+              <p>Protect your family. Protect your coworkers. Verify today. Office 5 is an analog indie horror experience where the player can never be certain who is human or who is unverified. </p>
+              <a class="mainButton" href="https://store.steampowered.com/app/3887040/Office_5/" role="button">Office 5 »</a>
+            </li>
+            <li>
+              <h4>The Retroactive Fulfillment Corporation (The R.F.C.) exists in a world where Doppelgängers and unverified people plague society.</h4>
+              <p>You are Riku Moriyama, a recent transfer from Office 3, who is starting his first day on the job at Office 5. Office 5 has recently secured its biggest client to date and has become inundated with transfers, new faces, and daily requirements for verification. </p>
+            </li>
+            <li>
+              <h4>Verification</h4>
+              <ul>
+                <li>The R.F.C. now recommends daily verification for all its employees.</li>
+                <li>"Protect your family. Protect your coworkers. Verify today."</li>
+                <li>"A verified employee is a safe employee."</li>
+              </ul>
+              <p>Without verification there is no guarantee an employee will be granted access to any R.F.C. facilities. The admittance of unverified people endangers your coworkers, and most importantly, delays fulfillment of client requests. </p>
+            </li>
+            <li>
+              <h4>Office 5 Information</h4>
+              <ul>
+                <li>Office 5 is one of 32 branches of offices maintained by the R.F.C.</li>
+                <li>A new client recently chose Office 5 to be responsible for all of its requests.</li>
+                <li>In order to ensure consistent fulfillment, new employees and transfers must report to the Office 5 Verification Center. </li>
+              </ul>
+              <p>The top priority of Office 5 is to ensure the continuation of client request fulfillment, regardless of an employees circumstance. </p>
+            </li>
+            <li>
+              <h4>The Unverified Person Discrepancy Alarm (U.P.D.A.)</h4>
+              <p>In the unlikely event security detects the presence of an unverified person, the "U.P.D.A" will inform employees. Employees will be trained to escape to a safe place until help arrives. </p>
+            </li>
+            <li>
+              <h4>Key Features</h4>
+              <ul>
+                <li>Environment Interactions: Riku can interact with a variety of signs, items and NPCs to progress the story. </li>
+                <li>Hiding: Get away from the enemy by utilizing your surroundings. </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <h1>Previous Projects</h1>
+        <div class="text-container">
+          <ul>
+            <li>
+              <h4>Summary</h4>
+              <p>Santa's Shadow is an indie horror experience that pits the player against a crazed family member. The goal is to escape by any means nescessary.</p>
+              <a class="mainButton" href="https://store.steampowered.com/app/3422210/Santas_Shadow/" role="button">Santa's Shadow »</a>
+            </li>
+          </ul>
+        </div>
+        <h1>My Repositories</h1>
+        <div class="text-container">
+          <ul>
+            <li>More information on things I have worked on can be found on my GitHub.</li>
+          </ul>
+          <a class="mainButton" href="https://github.com/raydillanv/" role="button">My Github »</a>
+        </div>
       </div>
-      <p class="copyright-footer">
-        Copyright &copy; 2026
-        <a href="mailto:dillanrvictory@gmail.com">Dillan Victory</a>. All rights
-        reserved.
-      </p>
-    </footer>
+    </div>
 
-    <!-- jQuery and Bootstrap JS -->
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
+    <div class="container">
+      <div id="Resume" class="section">
+        <h1>Education</h1>
+        <div class="text-container">
+            <p>Nashville TN 37212 | dillanrvictory@gmail.com</p>
+            <ul>
+              <li>Belmont University, Nashville TN, Full-time - Aug 2022 - Present</li>
+              <li>University of Strathclyde, Glasgow Scotland, Full-time - Jan 2024 - Jun 2024</li>
+              <li>Seinan Gakuin University, Fukuoka Japan, Full-time - Aug 2023 - Dec 2023</li>
+            </ul>
+        </div>
+        <h1>Work History</h1>
+        <div class="text-container">
+          <p>Nashville TN 37212 | dillanrvictory@gmail.com</p>
+          <ul>
+            <li>Walgreens, Nashville TN, Full-time - Aug 2022 - Aug 2023</li>
+            <li>Walgreens, Manchester TN, Full-time - May 2023 - Aug 2023</li>
+            <li>Walgreens, Murfreesburo TN, Part-time - Intermitently 2021 - 2023</li>
+            <li>Walgreens, Tullahoma TN, Full-time - Aug 2021 - Aug 2023</li>
+            <li>Walmart, Shelbyville TN, Full-time - Apr 2021 - Aug 2021</li>
+          </ul>
+        </div>
+        <h1>Language Study</h1>
+        <div class="text-container">
+          <p>Nashville TN 37212 | dillanrvictory@gmail.com</p>
+          <ul>
+            <li><b>French:</b> During freshman year of high school (2018), I began studying French, and continued for 4 years. Here is where my love for languages began.</li>
+            <li><b>Japanese:</b> Later in life, during my freshman year of university (2022), I began studying Japanese. I have been studying Japanese for 2 years now.</li>
+            <li><b>Italian:</b> I have had interactions with Italian since I was young; however, it was sophomore year of university that I began studying more formal Italian.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
-    <script src="js/bootstrap-4.4.1.js"></script>
+    <div class="container">
+      <div id="Contact" class="section">
+        <h1>Contact Information</h1>
+        <div class="text-container">
+            <p>Nashville TN 37212 | dillanrvictory@gmail.com</p>
+            <ul>
+              <li>More contact details coming soon.</li>
+            </ul>
+            <p>Copyright &copy; 2026 <a href="mailto:dillanrvictory@gmail.com">Dillan Victory</a>. All rights reserved.</p>
+
+            <p><a class="mainButton"
+                href="https://www.linkedin.com/in/dillanvictory/"
+                role="button">My LinkedIn »</a></p>
+
+            <div class="social-media-links" style="margin-bottom: 10px">
+              <a href="https://www.instagram.com/raydillanv/" target="_blank" style="margin-right: 2px; display: inline-block; width: 5%">
+                <img src="images/tBxa1IFcTQH.png" alt="Instagram" style="width: 100%; height: auto; max-width: 40px" />
+              </a>
+              <a href="https://discord.gg/dDMxsRqN7Z" target="_blank" style="margin-right: 2px; display: inline-block; width: 5%">
+                <img src="images/icon_clyde_blurple_RGB.png" alt="Discord" style="width: 100%; height: auto; max-width: 40px" />
+              </a>
+              <a href="https://www.linkedin.com/in/dillanvictory/" target="_blank" style="margin-right: 2px; display: inline-block; width: 5%">
+                <img src="images/LinkedIn_icon_circle.svg.png" alt="LinkedIn" style="width: 100%; height: auto; max-width: 40px" />
+              </a>
+              <a href="https://www.youtube.com/channel/UCZcnbssSYX67ztziXTp-oqQ" target="_blank" style="margin-right: 2px; display: inline-block; width: 5%">
+                <img src="images/free-youtube-logo-icon-2431-thumb.png" alt="YouTube" style="width: 100%; height: auto; max-width: 40px" />
+              </a>
+              <a href="https://github.com/raydillanv" target="_blank" style="margin-right: 2px; display: inline-block; width: 5%">
+                <img src="images/25231.png" alt="GitHub" style="width: 100%; height: auto; max-width: 40px" />
+              </a>
+              <a href="https://twitter.com/DillanVictory" target="_blank" style="margin-right: 2px; display: inline-block; width: 5%">
+                <img src="images/X-logo-transparent-black-twitter.png" alt="X / Twitter" style="width: 100%; height: auto; max-width: 40px" />
+              </a>
+              <a href="https://www.paypal.com/donate/?business=B6GXXULAEPFF2&no_recurring=0&currency_code=USD" target="_blank" style="margin-right: 2px; display: inline-block; width: 5%">
+                <img src="images/paypal.png" alt="PayPal" style="width: 100%; height: auto; max-width: 40px" />
+              </a>
+            </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
     <script>
-      // Function to change the icon images in dark mode
+      // Dark mode icon swap
       function updateIconsForDarkMode() {
-        if (
-          window.matchMedia &&
-          window.matchMedia("(prefers-color-scheme: dark)").matches
-        ) {
-          // If user prefers dark mode, change the icons
-          document.querySelector(
-            'a[href="https://twitter.com/DillanVictory"] img'
-          ).src = "images/x-twitter-logo-white.png"; // Update the source for the Twitter icon
-          document.querySelector(
-            'a[href="https://github.com/raydillanv"] img'
-          ).src = "images/github-white-icon.png"; // Update the source for the GitHub icon
-        } else {
-          // If user prefers light mode, keep or set the icons to their light mode versions
-          document.querySelector(
-            'a[href="https://twitter.com/DillanVictory"] img'
-          ).src = "images/X-logo-transparent-black-twitter.png"; // Path to your light mode Twitter icon
-          document.querySelector(
-            'a[href="https://github.com/raydillanv"] img'
-          ).src = "images/25231.png"; // Path to your light mode GitHub icon
-        }
+        const dark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.querySelector('a[href="https://twitter.com/DillanVictory"] img').src =
+          dark ? "images/x-twitter-logo-white.png" : "images/X-logo-transparent-black-twitter.png";
+        document.querySelector('a[href="https://github.com/raydillanv"] img').src =
+          dark ? "images/github-white-icon.png" : "images/25231.png";
       }
-
-      // Call the function to ensure icons are set correctly on initial load
       updateIconsForDarkMode();
+      window.matchMedia("(prefers-color-scheme: dark)").addListener(updateIconsForDarkMode);
 
-      // Add a listener to change icons when the system theme changes
-      window
-        .matchMedia("(prefers-color-scheme: dark)")
-        .addListener(updateIconsForDarkMode);
+      // Background marquee builder
+      (function buildMarquee() {
+        const container = document.getElementById('bg-marquee');
+        const rowHeight = 60;   // px between rows
+        const rows = Math.ceil(window.innerHeight / rowHeight) + 3;
+
+        // Alternate between the two strings, and alternate direction
+        const texts = [
+          'Dillan Victory',
+          'ビクトリーディラン',
+        ];
+
+        for (let i = 0; i < rows; i++) {
+          const ltr = i % 2 === 0;
+          const text = texts[i % texts.length];
+
+          // Repeat the string enough to fill two screen-widths (we translate -50% for seamless loop)
+          const repeat = 12;
+          const content = (text + '   ·   ').repeat(repeat);
+
+          const row = document.createElement('div');
+          row.className = `marquee-row ${ltr ? 'marquee-ltr' : 'marquee-rtl'}`;
+
+          // Stagger start position so rows don't all begin at the same phase
+          const duration = 28 + (i % 3) * 8;  // 28s / 36s / 44s cycling
+          const delay = -(i * 3.5);             // negative delay = starts mid-animation
+
+          row.style.cssText = `
+            top: ${i * rowHeight}px;
+            animation-duration: ${duration}s;
+            animation-delay: ${delay}s;
+          `;
+          row.textContent = content;
+          container.appendChild(row);
+        }
+      })();
     </script>
   </body>
 </html>

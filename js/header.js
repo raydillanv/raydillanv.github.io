@@ -2,8 +2,8 @@ let headerContent = `
       <button
         class="navbar-toggler"
         type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent1"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent1"
         aria-controls="navbarSupportedContent1"
         aria-expanded="false"
         aria-label="Toggle navigation"
@@ -23,7 +23,7 @@ let headerContent = `
                 style="height: 20px; width: auto; margin-right: 5px"
               />
               Home
-              <span class="sr-only"></span>
+              <span class="visually-hidden"></span>
             </a>
           </li>
 
@@ -43,28 +43,23 @@ let headerContent = `
               href="#"
               id="navbarDropdown1"
               role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
+              data-bs-toggle="dropdown"
               aria-expanded="false"
             >
               Dropdown
             </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
-              <a
-                class="dropdown-item"
-                href="https://www.paypal.com/donate/?business=B6GXXULAEPFF2&no_recurring=0&currency_code=USD"
-                >Support My Projects</a
-              >
-              <a
-                class="dropdown-item"
-                href="https://tools.tastethecode.com/youtube-latest/r/raydillanv"
-                >My Latest Video</a
-              >
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="https://github.com/raydillanv"
-                >Dillan's GitHub</a
-              >
-            </div>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
+              <li>
+                <a class="dropdown-item" href="https://www.paypal.com/donate/?business=B6GXXULAEPFF2&no_recurring=0&currency_code=USD">Support My Projects</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="https://tools.tastethecode.com/youtube-latest/r/raydillanv">My Latest Video</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li>
+                <a class="dropdown-item" href="https://github.com/raydillanv">Dillan's GitHub</a>
+              </li>
+            </ul>
           </li>
         </ul>
       </div>
@@ -104,10 +99,11 @@ function showSection(targetId) {
     }
   });
 
-  // Collapse navbar on mobile after clicking
+  // Collapse navbar on mobile after clicking (Bootstrap 5 way)
   const navbarCollapse = document.getElementById('navbarSupportedContent1');
   if (navbarCollapse && navbarCollapse.classList.contains('show')) {
-    navbarCollapse.classList.remove('show');
+    const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+    if (bsCollapse) bsCollapse.hide();
   }
 }
 
