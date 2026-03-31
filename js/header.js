@@ -16,7 +16,7 @@ let headerContent = `
       >
         <ul class="navbar-nav mx-auto">
           <li class="nav-item active">
-            <a class="nav-link text-dark" href="index.html">
+            <a class="nav-link text-dark section-link" href="#" data-section="about">
               <img
                 src="apple-icon.png"
                 alt="Home"
@@ -28,25 +28,13 @@ let headerContent = `
           </li>
 
           <li class="nav-item">
-            <a class="nav-link text-dark" href="education.html">Education</a>
+            <a class="nav-link text-dark section-link" href="#" data-section="projects">Projects</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-dark" href="work.html">Work History</a>
+            <a class="nav-link text-dark section-link" href="#" data-section="Resume">Résumé</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-dark" href="projects.html">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-dark" href="language.html"
-              >Language Study</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-dark" href="other.html">Other</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link text-dark" href="Japanese/index.html">日本語</a>
+            <a class="nav-link text-dark section-link" href="#" data-section="Contact">Contact Me</a>
           </li>
 
           <li class="nav-item dropdown">
@@ -81,4 +69,50 @@ let headerContent = `
         </ul>
       </div>
 `;
+
 document.querySelector('#NavContainer').insertAdjacentHTML('beforeend', headerContent);
+
+// All section IDs managed by the nav
+const sectionIds = ['about', 'projects', 'Resume', 'Contact'];
+
+function showSection(targetId) {
+  sectionIds.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) {
+      const container = el.closest('.container');
+      if (container) {
+        container.style.display = id === targetId ? '' : 'none';
+      }
+    }
+  });
+
+  // Update active state on nav links
+  document.querySelectorAll('.section-link').forEach(link => {
+    const parentLi = link.closest('li');
+    if (link.dataset.section === targetId) {
+      parentLi.classList.add('active');
+    } else {
+      parentLi.classList.remove('active');
+    }
+  });
+
+  // Collapse navbar on mobile after clicking
+  const navbarCollapse = document.getElementById('navbarSupportedContent1');
+  if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+    navbarCollapse.classList.remove('show');
+  }
+}
+
+// Attach click listeners after DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+  // Show only the 'about' section by default
+  showSection('about');
+
+  document.querySelectorAll('.section-link').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const target = link.dataset.section;
+      showSection(target);
+    });
+  });
+});
