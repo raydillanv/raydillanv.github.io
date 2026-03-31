@@ -81,7 +81,15 @@ function showSection(targetId) {
     if (el) {
       const container = el.closest('.container');
       if (container) {
-        container.style.display = id === targetId ? '' : 'none';
+        if (id === targetId) {
+          container.style.display = '';
+          // Remove then re-add the class to re-trigger the animation
+          el.classList.remove('animate-in');
+          void el.offsetWidth; // force reflow so the browser resets the animation
+          el.classList.add('animate-in');
+        } else {
+          container.style.display = 'none';
+        }
       }
     }
   });
